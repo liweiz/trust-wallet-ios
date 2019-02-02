@@ -6,7 +6,7 @@ target 'Trust' do
   use_frameworks!
 
   pod 'BigInt', '~> 3.0'
-  pod 'R.swift'
+  pod 'R.swift', '~> 4.0.0'
   pod 'JSONRPCKit', :git=> 'https://github.com/bricklife/JSONRPCKit.git'
   pod 'PromiseKit', '~> 6.0'
   pod 'APIKit'
@@ -21,14 +21,14 @@ target 'Trust' do
   pod 'Moya', '~> 10.0.1'
   pod 'CryptoSwift', '~> 0.10.0'
   pod 'Kingfisher', '~> 4.0'
-  pod 'TrustCore', :git=>'https://github.com/TrustWallet/trust-core', :branch=>'master'
+  pod 'TrustCore', :git=>'https://github.com/liweiz/trust-core-moac', :branch=>'commit_f987ee1'
   pod 'TrustKeystore', :git=>'https://github.com/TrustWallet/trust-keystore', :branch=>'master'
   pod 'TrezorCrypto'
   pod 'Branch'
   pod 'SAMKeychain'
   pod 'TrustWeb3Provider', :git=>'https://github.com/TrustWallet/trust-web3-provider', :commit=>'f4e0ebb1b8fa4812637babe85ef975d116543dfd'
   pod 'URLNavigator'
-  pod 'TrustWalletSDK', :git=>'https://github.com/TrustWallet/TrustSDK-iOS', :branch=>'master'
+  pod 'TrustWalletSDK', :git=>'https://github.com/liweiz/TrustSDK-iOS-Moac', :branch=>'commit_99eb145'
 
   target 'TrustTests' do
     inherit! :search_paths
