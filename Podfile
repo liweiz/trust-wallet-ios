@@ -22,7 +22,7 @@ target 'Trust' do
   pod 'CryptoSwift', '~> 0.10.0'
   pod 'Kingfisher', '~> 4.0'
   pod 'TrustCore', :git=>'https://github.com/liweiz/trust-core-moac', :branch=>'commit_f987ee1'
-  pod 'TrustKeystore', :git=>'https://github.com/TrustWallet/trust-keystore', :branch=>'master'
+  pod 'TrustKeystore', :git=>'https://github.com/liweiz/trust-keystore', :branch=>'commit_5829d96'
   pod 'TrezorCrypto'
   pod 'Branch'
   pod 'SAMKeychain'
