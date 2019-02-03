@@ -37,7 +37,7 @@ class WalletsViewModel {
         var valueProviders = [(WalletBalanceProvider, WalletObject)]()
 
         for wallet in self.keystore.wallets {
-            guard let server = wallet.coin?.server, let address = EthereumAddress(string: wallet.currentAccount.address.description)   else { continue }
+            guard let server = wallet.coin?.server, let address = MoacAddress(string: wallet.currentAccount.address.description)   else { continue }
             valueProviders.append((WalletBalanceProvider(server: server, addressUpdate: address), wallet.info))
         }
 

@@ -119,7 +119,7 @@
 "transaction.cell.tokenTransfer.title" = "Übertragen %@";
 "Yesterday" = "Gestern";
 "Deleting" = "Löschen";
-"EthereumAddress" = "Ethereum-Adresse";
+"MoacAddress" = "Ethereum-Adresse";
 "InCoordinatorError.onlyWatchAccount" = "Nur öffentliche Informationen dieses Wallets einsehbar. Importieren Sie den privaten Schlüssel / Keystore, um Transaktionen zu signieren";
 "ShareWithFriends" = "Mit Freunden teilen";
 "transaction.cell.unknown.title" = "Unbekannt";

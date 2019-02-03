@@ -19,7 +19,7 @@ class SendCoordinatorTests: XCTestCase {
 //    }
 //
 //    func testDestanation() {
-//        let address: EthereumAddress = .make()
+//        let address: MoacAddress = .make()
 //        let coordinator = SendCoordinator(
 //            transfer: Transfer(server: .make(), type: .ether(.make(), destination: .none)) ,
 //            navigationController: FakeNavigationController(),

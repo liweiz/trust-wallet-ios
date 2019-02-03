@@ -8,7 +8,7 @@ import TrustCore
 class GetNonceProviderTests: XCTestCase {
     
     func testDefault() {
-        let provider = GetNonceProvider(storage: FakeTransactionsStorage(), server: .make(), address: EthereumAddress.make())
+        let provider = GetNonceProvider(storage: FakeTransactionsStorage(), server: .make(), address: MoacAddress.make())
 
         XCTAssertNil(provider.latestNonce)
         XCTAssertNil(provider.nextNonce)
@@ -20,7 +20,7 @@ class GetNonceProviderTests: XCTestCase {
         let provider = GetNonceProvider(
             storage: storage,
             server: .make(),
-            address: EthereumAddress.make()
+            address: MoacAddress.make()
         )
 
         XCTAssertEqual(BigInt(0), provider.latestNonce)
@@ -35,7 +35,7 @@ class GetNonceProviderTests: XCTestCase {
         let provider = GetNonceProvider(
             storage: storage,
             server: .make(),
-            address: EthereumAddress.make()
+            address: MoacAddress.make()
         )
 
         XCTAssertNil(provider.latestNonce)
@@ -48,7 +48,7 @@ class GetNonceProviderTests: XCTestCase {
         let provider = GetNonceProvider(
             storage: storage,
             server: .make(),
-            address: EthereumAddress.make()
+            address: MoacAddress.make()
         )
 
         XCTAssertEqual(BigInt(6), provider.latestNonce)
@@ -61,7 +61,7 @@ class GetNonceProviderTests: XCTestCase {
         let provider = GetNonceProvider(
             storage: storage,
             server: .make(),
-            address: EthereumAddress.make()
+            address: MoacAddress.make()
         )
 
         XCTAssertEqual(BigInt(5), provider.latestNonce)
@@ -79,7 +79,7 @@ class GetNonceProviderTests: XCTestCase {
         let provider = GetNonceProvider(
             storage: storage,
             server: .make(),
-            address: EthereumAddress.make()
+            address: MoacAddress.make()
         )
 
         XCTAssertEqual(BigInt(5), provider.latestNonce)

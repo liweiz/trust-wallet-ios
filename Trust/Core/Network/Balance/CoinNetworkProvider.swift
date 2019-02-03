@@ -11,12 +11,12 @@ final class CoinNetworkProvider: BalanceNetworkProvider {
 
     let server: RPCServer
     let address: Address
-    let addressUpdate: EthereumAddress
+    let addressUpdate: MoacAddress
 
     init(
         server: RPCServer,
         address: Address,
-        addressUpdate: EthereumAddress
+        addressUpdate: MoacAddress
     ) {
         self.server = server
         self.address = address

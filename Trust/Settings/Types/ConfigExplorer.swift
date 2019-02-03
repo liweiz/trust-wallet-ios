@@ -26,6 +26,12 @@ struct ConfigExplorer {
                 return endpoint + "/tx/" + ID
             case .gochain:
                 return endpoint + "/tx/" + ID
+            case .moac:
+                return endpoint + "/tx/" + ID
+            case .moacTestnet:
+                return endpoint + "/tx/" + ID
+            case .moacLocalPrivate:
+                return endpoint + "/tx/" + ID
             }
         }()
         guard let string = urlString else { return .none }
@@ -44,6 +50,12 @@ struct ConfigExplorer {
             return "https://explorer.callisto.network"
         case .gochain:
             return "https://explorer.gochain.io"
+        case .moac:
+            return "http://explorer.moac.io"
+        case .moacTestnet:
+            return "http://47.75.144.55:3000"
+        case .moacLocalPrivate:
+            return ""
         }
     }
 }

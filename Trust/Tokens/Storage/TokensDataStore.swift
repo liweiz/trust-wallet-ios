@@ -52,7 +52,7 @@ class TokensDataStore {
     }
 
     private func addNativeCoins() {
-        if let token = getToken(for: EthereumAddress.zero) {
+        if let token = getToken(for: MoacAddress.zero) {
             try? realm.write {
                 realm.delete(token)
             }
@@ -255,6 +255,8 @@ extension Coin {
         case .gochain: return RPCServer.gochain
         case .callisto: return RPCServer.callisto
         case .poa: return RPCServer.poa
+        case .moac: return RPCServer.moac
+        case .testnetAllCoins: return RPCServer.moacTestnet
         }
     }
 }

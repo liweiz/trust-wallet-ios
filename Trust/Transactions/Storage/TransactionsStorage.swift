@@ -65,7 +65,7 @@ class TransactionsStorage {
         let tokens: [Token] = transactions.compactMap { transaction in
             guard
                 let operation = transaction.localizedOperations.first,
-                let contract = EthereumAddress(string: operation.contract ?? ""),
+                let contract = MoacAddress(string: operation.contract ?? ""),
                 let name = operation.name,
                 let symbol = operation.symbol
                 else { return nil }

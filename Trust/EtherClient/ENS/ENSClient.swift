@@ -21,7 +21,7 @@ import APIKit
 //    }
 //}
 //
-//typealias ENSResolveResult = (resolver: EthereumAddress, address: Address)
+//typealias ENSResolveResult = (resolver: MoacAddress, address: Address)
 //
 //struct ENSClient {
 //
@@ -30,7 +30,7 @@ import APIKit
 //    let server: RPCServer
 //
 //    var ensAvailable: Bool {
-//        return server.ensContract != EthereumAddress.zero
+//        return server.ensContract != MoacAddress.zero
 //    }
 //
 //    init(server: RPCServer) {
@@ -41,7 +41,7 @@ import APIKit
 //        return firstly {
 //            return self.resolverOf(name: name)
 //        }.then { resolver -> Promise<ENSResolveResult> in
-//            if resolver == EthereumAddress.zero {
+//            if resolver == MoacAddress.zero {
 //                return Promise { $0.resolve((resolver: resolver, address: resolver), nil) }
 //            }
 //            let encoded = PublicResolverEncoder.encodeAddr(node: namehash(name))
@@ -77,7 +77,7 @@ import APIKit
 //        return firstly {
 //            return self.resolverOf(name: addr)
 //        }.then { resolver -> Promise<String> in
-//            if resolver == EthereumAddress.zero {
+//            if resolver == MoacAddress.zero {
 //                return Promise { $0.resolve("", nil) }
 //            }
 //            let node = namehash(addr)
@@ -115,7 +115,7 @@ import APIKit
 //                    }
 //                    //take the last 20 bytes for Address
 //                    let sub = data.suffix(20)
-//                    seal.fulfill(EthereumAddress(data: sub))
+//                    seal.fulfill(MoacAddress(data: sub))
 //                case .failure(let error):
 //                    seal.reject(error)
 //                }

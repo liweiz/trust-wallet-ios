@@ -15,7 +15,7 @@ final class CoinTicker: Object, Decodable {
     convenience init(
         price: String = "",
         percent_change_24h: String = "",
-        contract: EthereumAddress,
+        contract: MoacAddress,
         tickersKey: String = ""
     ) {
         self.init()

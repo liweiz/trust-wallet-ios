@@ -32,7 +32,7 @@ extension Account {
     static func make(wallet: Wallet) -> Account {
         return Account(
             wallet: .make(),
-            address: EthereumAddress.make(),
+            address: MoacAddress.make(),
             derivationPath: Coin.ethereum.derivationPath(at: 0)
         )
     }

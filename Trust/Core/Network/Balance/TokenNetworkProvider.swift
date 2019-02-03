@@ -10,15 +10,15 @@ import JSONRPCKit
 final class TokenNetworkProvider: BalanceNetworkProvider {
 
     let server: RPCServer
-    let address: EthereumAddress
-    let contract: EthereumAddress
-    let addressUpdate: EthereumAddress
+    let address: MoacAddress
+    let contract: MoacAddress
+    let addressUpdate: MoacAddress
 
     init(
         server: RPCServer,
-        address: EthereumAddress,
-        contract: EthereumAddress,
-        addressUpdate: EthereumAddress
+        address: MoacAddress,
+        contract: MoacAddress,
+        addressUpdate: MoacAddress
     ) {
         self.server = server
         self.address = address

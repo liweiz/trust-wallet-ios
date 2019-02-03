@@ -108,7 +108,7 @@ struct TransactionDetailsViewModel {
             return transaction.to
         case .ERC20:
             if transaction.toAddress == nil {
-                return EthereumAddress.zero.description
+                return MoacAddress.zero.description
             }
             if transactionViewModel.direction == .incoming {
                 return transaction.from

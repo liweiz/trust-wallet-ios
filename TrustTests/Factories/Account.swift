@@ -7,7 +7,7 @@ import TrustKeystore
 
 extension Account {
     static func make(
-        address: EthereumAddress = .make(),
+        address: MoacAddress = .make(),
         derivationPath: DerivationPath = Coin.ethereum.derivationPath(at: 0)
     ) -> Account {
         return Account(

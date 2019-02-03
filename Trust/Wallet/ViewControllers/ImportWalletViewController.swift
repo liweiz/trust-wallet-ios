@@ -146,7 +146,7 @@ final class ImportWalletViewController: FormViewController {
             }
             <<< AppFormAppearance.textFieldFloat(tag: Values.watch) {
                 $0.add(rule: RuleRequired())
-                $0.add(rule: EthereumAddressRule())
+                $0.add(rule: MoacAddressRule())
             }.cellUpdate { [weak self] cell, _ in
                 cell.textField.placeholder = self?.viewModel.watchAddressPlaceholder
                 cell.textField.rightView = recipientRightView
@@ -203,7 +203,7 @@ final class ImportWalletViewController: FormViewController {
             case .mnemonic:
                 return .mnemonic(words: words, password: password, derivationPath: coin.derivationPath(at: 0))
             case .address:
-                let address = EthereumAddress(string: addressInput)! // EthereumAddress validated by form view.
+                let address = MoacAddress(string: addressInput)! // MoacAddress validated by form view.
                 return .address(address: address)
             }
         }()
@@ -221,7 +221,7 @@ final class ImportWalletViewController: FormViewController {
 
     @objc func demo() {
         //Used for taking screenshots to the App Store by snapshot
-        let demoWallet = WalletType.address(Coin.ethereum, EthereumAddress(string: "0xD663bE6b87A992C5245F054D32C7f5e99f5aCc47")!)
+        let demoWallet = WalletType.address(Coin.ethereum, MoacAddress(string: "0xD663bE6b87A992C5245F054D32C7f5e99f5aCc47")!)
         let walletInfo = WalletInfo(type: demoWallet, info: WalletObject.from(demoWallet))
         delegate?.didImportAccount(account: walletInfo, fields: [], in: self)
     }

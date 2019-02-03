@@ -58,6 +58,8 @@ struct CoinTypeViewModel {
         case .poa: return RPCServer.poa
         case .callisto: return RPCServer.callisto
         case .bitcoin: return RPCServer.main
+        case .moac: return RPCServer.moac
+        case .testnetAllCoins: return RPCServer.moacTestnet
         }
     }
 }

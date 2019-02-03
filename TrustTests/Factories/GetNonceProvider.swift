@@ -8,7 +8,7 @@ extension GetNonceProvider {
     static func make(
         storage: TransactionsStorage = FakeTransactionsStorage(),
         server: RPCServer = .main,
-        address: Address = EthereumAddress.zero
+        address: Address = MoacAddress.zero
     ) -> GetNonceProvider {
         return GetNonceProvider(
             storage: storage,

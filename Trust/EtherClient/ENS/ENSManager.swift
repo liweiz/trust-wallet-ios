@@ -23,17 +23,17 @@ import PromiseKit
 //        let now = Date()
 //        let filtered = store.records.filter("name == %@", name)
 //        if ignoreCache == false, let record = filtered.first, now.timeIntervalSince(record.updatedAt) <= localInterval {
-//            return Promise { $0.resolve(EthereumAddress(string: record.owner), nil) }
+//            return Promise { $0.resolve(MoacAddress(string: record.owner), nil) }
 //        }
-//        return client.resolve(name: name).map { result -> EthereumAddress in
-//            if result.address != EthereumAddress.zero {
+//        return client.resolve(name: name).map { result -> MoacAddress in
+//            if result.address != MoacAddress.zero {
 //                self.store.add(record: ENSRecord(name: name, address: result.address.description, resolver: result.resolver.description))
 //            }
 //            return result.address
 //        }
 //    }
 //
-//    func lookup(address: EthereumAddress, ignoreCache: Bool = false) -> Promise<String> {
+//    func lookup(address: MoacAddress, ignoreCache: Bool = false) -> Promise<String> {
 //        guard client.ensAvailable else {
 //            return Promise { $0.reject(ENSError.contractNotFound) }
 //        }

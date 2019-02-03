@@ -9,13 +9,13 @@ import TrustKeystore
 extension PreviewTransaction {
     static func make(
         account: Account = .make(),
-        address: Address = EthereumAddress.zero
+        address: Address = MoacAddress.zero
     ) -> PreviewTransaction {
         return PreviewTransaction(
             value: BigInt(),
             account: account,
-            address: EthereumAddress.zero,
-            contract: EthereumAddress.zero,
+            address: MoacAddress.zero,
+            contract: MoacAddress.zero,
             nonce: BigInt(),
             data: Data(),
             gasPrice: BigInt(),

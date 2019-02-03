@@ -39,7 +39,7 @@ final class AddCustomNetworkViewController: FormViewController {
             +++ Section()
 
             <<< AppFormAppearance.textFieldFloat(tag: Values.chainID) {
-                $0.add(rule: EthereumAddressRule())
+                $0.add(rule: MoacAddressRule())
                 $0.validationOptions = .validatesOnDemand
                 $0.title = R.string.localizable.chainID()
             }.cellUpdate { cell, _ in

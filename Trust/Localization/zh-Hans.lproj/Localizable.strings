@@ -119,7 +119,7 @@
 "transaction.cell.tokenTransfer.title" = "转账 %@";
 "Yesterday" = "昨天";
 "Deleting" = "删除";
-"EthereumAddress" = "以太坊地址";
+"MoacAddress" = "以太坊地址";
 "InCoordinatorError.onlyWatchAccount" = "这个钱包只能观察，请导入私钥 / Keystore 来签署交易";
 "ShareWithFriends" = "与朋友分享";
 "transaction.cell.unknown.title" = "未知";

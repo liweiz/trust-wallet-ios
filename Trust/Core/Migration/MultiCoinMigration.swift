@@ -70,7 +70,7 @@ class MultiCoinMigration {
 
         // Move string addresses to WalletAddress
         let addresses = watchAddresses.compactMap {
-            EthereumAddress(string: $0)
+            MoacAddress(string: $0)
         }.compactMap {
             WalletAddress(coin: .ethereum, address: $0)
         }

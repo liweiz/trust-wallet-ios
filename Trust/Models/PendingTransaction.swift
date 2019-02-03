@@ -48,11 +48,11 @@ extension Transaction {
         coin: Coin
     ) -> Transaction? {
         guard
-            let from = EthereumAddress(string: transaction.from) else {
+            let from = MoacAddress(string: transaction.from) else {
                 return .none
         }
         //TODO; Probably make sense to update values on initialTransaction and not create a new one.
-        let to = EthereumAddress(string: transaction.to)?.description ?? transaction.to
+        let to = MoacAddress(string: transaction.to)?.description ?? transaction.to
         return Transaction(
             id: transaction.hash,
             blockNumber: Int(transaction.blockNumber) ?? 0,

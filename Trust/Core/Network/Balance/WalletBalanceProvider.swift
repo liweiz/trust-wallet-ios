@@ -10,11 +10,11 @@ import JSONRPCKit
 final class WalletBalanceProvider: BalanceNetworkProvider {
 
     let server: RPCServer
-    let addressUpdate: EthereumAddress
+    let addressUpdate: MoacAddress
 
     init(
         server: RPCServer,
-        addressUpdate: EthereumAddress
+        addressUpdate: MoacAddress
         ) {
         self.server = server
         self.addressUpdate = addressUpdate

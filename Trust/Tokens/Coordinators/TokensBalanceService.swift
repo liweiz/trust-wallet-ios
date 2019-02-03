@@ -22,7 +22,7 @@ public class TokensBalanceService {
         contract: Address,
         completion: @escaping (Result<BigInt, AnyError>) -> Void
     ) {
-        guard let address = address as? EthereumAddress else {
+        guard let address = address as? MoacAddress else {
             return
         }
 

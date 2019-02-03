@@ -107,7 +107,7 @@ class SendViewController: FormViewController {
         recipientRightView.qrButton.addTarget(self, action: #selector(openReader), for: .touchUpInside)
 
         return AppFormAppearance.textFieldFloat(tag: Values.address) {
-            $0.add(rule: EthereumAddressRule())
+            $0.add(rule: MoacAddressRule())
             $0.validationOptions = .validatesOnDemand
         }.cellUpdate { cell, _ in
             cell.textField.textAlignment = .left
@@ -159,7 +159,7 @@ class SendViewController: FormViewController {
         guard errors.isEmpty else { return }
         let addressString = addressRow?.value?.trimmed ?? ""
         let amountString = viewModel.amount
-        guard let address = EthereumAddress(string: addressString) else {
+        guard let address = MoacAddress(string: addressString) else {
             return displayError(error: Errors.invalidAddress)
         }
         let parsedValue: BigInt? = {

@@ -332,7 +332,7 @@ class EtherKeystoreTests: XCTestCase {
 
     func testAddWatchAddress() {
         let keystore = FakeEtherKeystore()
-        let address: EthereumAddress = .make()
+        let address: MoacAddress = .make()
 
         keystore.importWallet(type: ImportType.address(address: address), coin: .ethereum) {_  in }
 
@@ -342,7 +342,7 @@ class EtherKeystoreTests: XCTestCase {
 
     func testDeleteWatchAddress() {
         let keystore = FakeEtherKeystore()
-        let address: EthereumAddress = .make()
+        let address: MoacAddress = .make()
 
         // TODO. Move this into sync calls
         keystore.importWallet(type: ImportType.address(address: address), coin: .ethereum) { result  in

@@ -17,8 +17,8 @@ enum Errors: LocalizedError {
     }
 }
 
-extension EthereumAddress {
-    static var zero: EthereumAddress {
-        return EthereumAddress(string: "0x0000000000000000000000000000000000000000")!
+extension MoacAddress {
+    static var zero: MoacAddress {
+        return MoacAddress(string: "0x0000000000000000000000000000000000000000")!
     }
 }

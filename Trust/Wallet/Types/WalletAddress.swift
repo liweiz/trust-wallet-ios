@@ -22,8 +22,8 @@ final class WalletAddress: Object {
         self.coin = coin
     }
 
-    var address: EthereumAddress? {
-        return EthereumAddress(string: addressString)
+    var address: MoacAddress? {
+        return MoacAddress(string: addressString)
     }
 
     override static func primaryKey() -> String? {

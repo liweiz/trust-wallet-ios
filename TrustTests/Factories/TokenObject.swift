@@ -6,7 +6,7 @@ import TrustCore
 
 extension TokenObject {
     static func make(
-        contract: Address = EthereumAddress.zero,
+        contract: Address = MoacAddress.zero,
         name: String = "Viktor",
         coin: Coin = .ethereum,
         type: TokenObjectType = .coin,

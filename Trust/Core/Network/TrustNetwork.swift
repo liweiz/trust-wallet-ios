@@ -47,7 +47,7 @@ final class TrustNetwork: NetworkProtocol {
     }
 
     private func getTickerFrom(_ rawTicker: CoinTicker) -> CoinTicker? {
-        guard let contract = EthereumAddress(string: rawTicker.contract) else { return .none }
+        guard let contract = MoacAddress(string: rawTicker.contract) else { return .none }
         return CoinTicker(
             price: rawTicker.price,
             percent_change_24h: rawTicker.percent_change_24h,

@@ -27,7 +27,7 @@ final class MigrationInitializer: Initializer {
                     guard let oldObject = oldObject else { return }
                     guard let newObject = newObject else { return }
                     guard let value = oldObject["contract"] as? String else { return }
-                    guard let address = EthereumAddress(string: value) else { return }
+                    guard let address = MoacAddress(string: value) else { return }
 
                     newObject["contract"] = address.description
                 }

@@ -87,7 +87,7 @@ final class TokensCoordinator: Coordinator {
 
     func editTokenViewController(token: TokenObject) -> NewTokenViewController {
         let token: ERC20Token? = {
-            guard let address = EthereumAddress(string: token.contract) else {
+            guard let address = MoacAddress(string: token.contract) else {
                 return .none
             }
             return ERC20Token(contract: address, name: token.name, symbol: token.symbol, decimals: token.decimals, coin: token.coin)

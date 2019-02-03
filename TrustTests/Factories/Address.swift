@@ -4,11 +4,11 @@ import Foundation
 @testable import Trust
 import TrustCore
 
-extension EthereumAddress {
+extension MoacAddress {
     static func make(
         address: String = "0x0000000000000000000000000000000000000001"
-    ) -> EthereumAddress {
-        return EthereumAddress(
+    ) -> MoacAddress {
+        return MoacAddress(
             string: address
         )!
     }

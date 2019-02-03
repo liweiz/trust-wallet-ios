@@ -6,6 +6,6 @@ import PromiseKit
 import BigInt
 
 protocol BalanceNetworkProvider {
-    var addressUpdate: EthereumAddress { get }
+    var addressUpdate: MoacAddress { get }
     func balance() -> Promise<BigInt>
 }

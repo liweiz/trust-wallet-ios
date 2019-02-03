@@ -120,7 +120,7 @@
 "transaction.cell.tokenTransfer.title" = "Transfer %@";
 "Yesterday" = "Вчера";
 "Deleting" = "Удаление";
-"EthereumAddress" = "Адрес Ethereum";
+"MoacAddress" = "Адрес Ethereum";
 "InCoordinatorError.onlyWatchAccount" = "Этот кошелек можно использовать только для просмотра. Импортируйте приватный ключ / Keystore для подписания транзакций / сообщений";
 "ShareWithFriends" = "Поделиться с друзьями";
 "transaction.cell.unknown.title" = "Неизвестно";

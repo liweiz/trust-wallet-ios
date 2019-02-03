@@ -23,7 +23,7 @@ class WalletTests: XCTestCase {
 
     func testWalletAddressDescription() {
         let coin: Coin = .ethereum
-        let address: EthereumAddress = .make()
+        let address: MoacAddress = .make()
         let walletType = WalletType.address(coin, address)
 
         XCTAssertEqual("wallet-address-\(coin.rawValue)-\(address.description)", walletType.description)

@@ -13,7 +13,7 @@ enum WalletType {
 
     case privateKey(Wallet)
     case hd(Wallet)
-    case address(Coin, EthereumAddress)
+    case address(Coin, MoacAddress)
 
     var description: String {
         switch self {

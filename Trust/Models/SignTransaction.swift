@@ -8,7 +8,7 @@ import TrustKeystore
 public struct SignTransaction {
     let value: BigInt
     let account: Account
-    let to: EthereumAddress?
+    let to: MoacAddress?
     let nonce: BigInt
     let data: Data
     let gasPrice: BigInt

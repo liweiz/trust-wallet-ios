@@ -119,7 +119,7 @@
 "transaction.cell.tokenTransfer.title" = "Chuyển khoản %@";
 "Yesterday" = "Hôm qua";
 "Deleting" = "Đang xóa";
-"EthereumAddress" = "Địa chỉ Ethereum";
+"MoacAddress" = "Địa chỉ Ethereum";
 "InCoordinatorError.onlyWatchAccount" = "Ví này có thể chỉ được sử dụng để xem. Nhập Private Key/Keystore để xác nhận thực hiện các giao dịch.";
 "ShareWithFriends" = "Chia sẻ với bạn bè.";
 "transaction.cell.unknown.title" = "Không xác định";

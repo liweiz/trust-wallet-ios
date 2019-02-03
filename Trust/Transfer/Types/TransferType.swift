@@ -9,7 +9,7 @@ struct Transfer {
 }
 
 enum TransferType {
-    case ether(TokenObject, destination: EthereumAddress?)
+    case ether(TokenObject, destination: MoacAddress?)
     case token(TokenObject)
     case dapp(TokenObject, DAppRequester)
 }
@@ -47,7 +47,7 @@ extension TransferType {
         }
     }
 
-    var address: EthereumAddress {
+    var address: MoacAddress {
         switch self {
         case .ether(let token, _):
             return token.address

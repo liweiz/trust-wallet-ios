@@ -89,7 +89,7 @@ final class CollectibleTokenObject: Object, Decodable {
         return URL(string: externalPath)
     }
 
-    var contractAddress: EthereumAddress {
-        return EthereumAddress(string: contract)!
+    var contractAddress: MoacAddress {
+        return MoacAddress(string: contract)!
     }
 }

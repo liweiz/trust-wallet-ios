@@ -119,7 +119,7 @@
 "transaction.cell.tokenTransfer.title" = "Transférer %@";
 "Yesterday" = "Hier";
 "Deleting" = "Suppression";
-"EthereumAddress" = "Adresse Ethereum";
+"MoacAddress" = "Adresse Ethereum";
 "InCoordinatorError.onlyWatchAccount" = "Ce portefeuille ne peut être utilisé que pour regarder. Importer une Clé Privée/Keystore pour signer des transactions/messages.";
 "ShareWithFriends" = "Partager avec des amis";
 "transaction.cell.unknown.title" = "Inconnu";

@@ -9,6 +9,9 @@ enum RPCServer {
     case classic
     case callisto
     case gochain
+    case moac
+    case moacTestnet
+    case moacLocalPrivate
 
     var id: String {
         switch self {
@@ -17,6 +20,9 @@ enum RPCServer {
         case .classic: return "classic"
         case .callisto: return "callisto"
         case .gochain: return "gochain"
+        case .moac: return "moac"
+        case .moacTestnet: return "moacTestnet"
+        case .moacLocalPrivate: return "moacLocalPrivate"
         }
     }
 
@@ -27,23 +33,29 @@ enum RPCServer {
         case .classic: return 61
         case .callisto: return 820
         case .gochain: return 60
+        case .moac: return 99
+        case .moacTestnet: return 101
+        case .moacLocalPrivate: return 237
         }
     }
 
     var priceID: Address {
         switch self {
-        case .main: return EthereumAddress(string: "0x000000000000000000000000000000000000003c")!
-        case .poa: return EthereumAddress(string: "0x00000000000000000000000000000000000000AC")!
-        case .classic: return EthereumAddress(string: "0x000000000000000000000000000000000000003D")!
-        case .callisto: return EthereumAddress(string: "0x0000000000000000000000000000000000000334")!
-        case .gochain: return EthereumAddress(string: "0x00000000000000000000000000000000000017aC")!
+        case .main: return MoacAddress(string: "0x000000000000000000000000000000000000003c")!
+        case .poa: return MoacAddress(string: "0x00000000000000000000000000000000000000AC")!
+        case .classic: return MoacAddress(string: "0x000000000000000000000000000000000000003D")!
+        case .callisto: return MoacAddress(string: "0x0000000000000000000000000000000000000334")!
+        case .gochain: return MoacAddress(string: "0x00000000000000000000000000000000000017aC")!
+        case .moac: return MoacAddress(string: "0x00000000000000000000000000000000000017aC")!
+        case .moacTestnet: return MoacAddress(string: "0x00000000000000000000000000000000000017aC")!
+        case .moacLocalPrivate: return MoacAddress(string: "0x00000000000000000000000000000000000017aC")!
         }
     }
 
     var isDisabledByDefault: Bool {
         switch self {
-        case .main: return false
-        case .poa, .classic, .callisto, .gochain: return true
+        case .main, .moac: return false
+        case .poa, .classic, .callisto, .gochain, .moacTestnet, .moacLocalPrivate: return true
         }
     }
 
@@ -54,6 +66,9 @@ enum RPCServer {
         case .classic: return "Ethereum Classic"
         case .callisto: return "Callisto"
         case .gochain: return "GoChain"
+        case .moac: return "Moac"
+        case .moacTestnet: return "Moac Testnet"
+        case .moacLocalPrivate: return "Moac Local Private"
         }
     }
 
@@ -68,6 +83,9 @@ enum RPCServer {
         case .callisto: return "CLO"
         case .poa: return "POA"
         case .gochain: return "GO"
+        case .moac: return "MC"
+        case .moacTestnet: return "MCt"
+        case .moacLocalPrivate: return "MClp"
         }
     }
 
@@ -83,6 +101,9 @@ enum RPCServer {
             case .callisto: return "https://clo-geth.0xinfra.com"
             case .poa: return "https://poa.infura.io"
             case .gochain: return "https://rpc.gochain.io"
+            case .moac: return "http://gateway.moac.io/mainnet"
+            case .moacTestnet: return "http://gateway.moac.io/testnet"
+            case .moacLocalPrivate: return "http://127.0.0.1:20001"
             }
         }()
         return URL(string: urlString)!
@@ -96,24 +117,27 @@ enum RPCServer {
             case .callisto: return "https://callisto.trustwalletapp.com"
             case .poa: return "https://poa.trustwalletapp.com"
             case .gochain: return "https://gochain.trustwalletapp.com"
+            case .moac: return "https://api.trustwalletapp.com"
+            case .moacTestnet: return "https://api.trustwalletapp.com"
+            case .moacLocalPrivate: return "https://api.trustwalletapp.com"
             }
         }()
         return URL(string: urlString)!
     }
 
-    var ensContract: EthereumAddress {
+    var ensContract: MoacAddress {
         // https://docs.ens.domains/en/latest/introduction.html#ens-on-ethereum
         switch self {
         case .main:
-            return EthereumAddress(string: "0x314159265dd8dbb310642f98f50c066173c1259b")!
-        case .classic, .poa, .callisto, .gochain:
-            return EthereumAddress.zero
+            return MoacAddress(string: "0x314159265dd8dbb310642f98f50c066173c1259b")!
+        case .classic, .poa, .callisto, .gochain, .moac, .moacTestnet, .moacLocalPrivate:
+            return MoacAddress.zero
         }
     }
 
     var openseaPath: String {
         switch self {
-        case .main, .classic, .poa, .callisto, .gochain: return Constants.dappsOpenSea
+        case .main, .classic, .poa, .callisto, .gochain, .moac, .moacTestnet, .moacLocalPrivate: return Constants.dappsOpenSea
         }
     }
 
@@ -132,6 +156,9 @@ enum RPCServer {
         case .callisto: return Coin.callisto
         case .poa: return Coin.poa
         case .gochain: return Coin.gochain
+        case .moac: return Coin.moac
+        case .moacTestnet: return Coin.testnetAllCoins
+        case .moacLocalPrivate: return Coin.testnetAllCoins
         }
     }
 }

@@ -67,7 +67,7 @@ final class NewTokenViewController: FormViewController {
         +++ Section()
 
         <<< AppFormAppearance.textFieldFloat(tag: Values.contract) { [unowned self] in
-            $0.add(rule: EthereumAddressRule())
+            $0.add(rule: MoacAddressRule())
             $0.validationOptions = .validatesOnDemand
             $0.title = R.string.localizable.contractAddress()
             $0.value = self.viewModel.contract
@@ -128,7 +128,7 @@ final class NewTokenViewController: FormViewController {
         let decimals = Int(decimalsRow?.value ?? "") ?? 0
         let coin = (networkRow?.value ?? RPCServer.main).coin
 
-        guard let address = EthereumAddress(string: contract) else {
+        guard let address = MoacAddress(string: contract) else {
             return displayError(error: Errors.invalidAddress)
         }
 

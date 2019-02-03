@@ -31,13 +31,13 @@ class QRURLParserTests: XCTestCase {
         XCTAssertEqual("ethereum", result?.protocolName)
     }
 
-    func testEthereumAddress() {
+    func testMoacAddress() {
         let result = QRURLParser.from(string: "ethereum:0x5a0b54d5dc17e0aadc383d2db43b0a0d3e029c4c")
 
         XCTAssertEqual("0x5a0b54d5dc17e0aadc383d2db43b0a0d3e029c4c", result?.address)
     }
 
-    func testEthereumAddressWithValue() {
+    func testMoacAddressWithValue() {
         let result = QRURLParser.from(string: "ethereum:0x5a0b54d5dc17e0aadc383d2db43b0a0d3e029c4c?value=1")
 
         XCTAssertEqual("0x5a0b54d5dc17e0aadc383d2db43b0a0d3e029c4c", result?.address)

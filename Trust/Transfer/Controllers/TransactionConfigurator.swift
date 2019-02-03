@@ -11,8 +11,8 @@ import APIKit
 public struct PreviewTransaction {
     let value: BigInt
     let account: Account
-    let address: EthereumAddress?
-    let contract: EthereumAddress?
+    let address: MoacAddress?
+    let contract: MoacAddress?
     let nonce: BigInt
     let data: Data
     let gasPrice: BigInt
@@ -200,7 +200,7 @@ final class TransactionConfigurator {
             case .token: return 0
             }
         }()
-        let address: EthereumAddress? = {
+        let address: MoacAddress? = {
             switch transaction.transfer.type {
             case .ether, .dapp: return transaction.to
             case .token(let token): return token.contractAddress

@@ -119,7 +119,7 @@
 "transaction.cell.tokenTransfer.title" = "Transferencia %@";
 "Yesterday" = "Ayer";
 "Deleting" = "Deleting";
-"EthereumAddress" = "Ethereum Address";
+"MoacAddress" = "Ethereum Address";
 "InCoordinatorError.onlyWatchAccount" = "This wallet can be only used for watching. Import Private Key/Keystore to sign transactions/messages";
 "ShareWithFriends" = "Share With Friends";
 "transaction.cell.unknown.title" = "Unknown";

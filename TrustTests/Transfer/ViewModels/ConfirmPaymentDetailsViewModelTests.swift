@@ -10,7 +10,7 @@ import TrustCore
 class ConfirmPaymentDetailsViewModelTests: XCTestCase {
 
     func testActionButtonTitleOnSignAndSend() {
-        let transactionAddress = EthereumAddress(string: "0x000000000000000000000000000000000000003c")!
+        let transactionAddress = MoacAddress(string: "0x000000000000000000000000000000000000003c")!
         let transaction: PreviewTransaction = .make(account: .make(address: transactionAddress))
         let session: WalletSession = .make()
         let viewModel = ConfirmPaymentDetailsViewModel(

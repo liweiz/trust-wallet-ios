@@ -49,8 +49,8 @@ final class LocalizedOperationObject: Object, Decodable {
         let to = try container.decode(String.self, forKey: .to)
 
         guard
-            let fromAddress = EthereumAddress(string: from),
-            let toAddress = EthereumAddress(string: to) else {
+            let fromAddress = MoacAddress(string: from),
+            let toAddress = MoacAddress(string: to) else {
                 let context = DecodingError.Context(codingPath: [LocalizedOperationObjectKeys.from,
                                                                  LocalizedOperationObjectKeys.to, ],
                                                     debugDescription: "Address can't be decoded as a TrustKeystore.Address")
