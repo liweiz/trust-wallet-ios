@@ -137,10 +137,10 @@ CHECKOUT OPTIONS:
     :commit: 1995d15e1d1cc09c9cfeb7e44eee519c7f10d487
     :git: https://github.com/yannickl/QRCodeReaderViewController.git
   TrustCore:
-    :commit: 626937b48028b3ecdcc44f0b39bbb43b01a51201
+    :commit: 3f07b66a41539eb331688c72732f810649c551ff
     :git: https://github.com/liweiz/trust-core-moac
   TrustKeystore:
-    :commit: 43f0c0fb31dcd3ec9e12da87585441ef0e6d7582
+    :commit: 1776b0ad94df6d6ec4159df91a60b8f0fe077242
     :git: https://github.com/liweiz/trust-keystore-moac
   TrustWalletSDK:
     :commit: f79d10916f8006a1d26956e5104ad97005a63869

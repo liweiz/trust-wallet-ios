@@ -20,6 +20,8 @@ struct CoinViewModel {
         case .callisto: return "Callisto"
         case .gochain: return "GoChain"
         case .moac: return "Moac"
+        case .moacTestnet: return "Moac Testnet"
+        case .moacLocalPrivate: return "Moac Local Private"
         case .testnetAllCoins: return "Moac Testnet"
         }
     }
@@ -33,6 +35,8 @@ struct CoinViewModel {
         case .gochain: return "GO"
         case .bitcoin: return "Bitcoin"
         case .moac: return "MC"
+        case .moacTestnet: return "MCt"
+        case .moacLocalPrivate: return "MClp"
         case .testnetAllCoins: return "MCt"
         }
     }
@@ -46,6 +50,8 @@ struct CoinViewModel {
         case .callisto: return R.image.ethereum820()
         case .gochain: return R.image.ethereum60()
         case .moac: return R.image.ethereum820()
+        case .moacTestnet: return R.image.ethereum820()
+        case .moacLocalPrivate: return R.image.ethereum820()
         case .testnetAllCoins: return R.image.ethereum60()
         }
     }

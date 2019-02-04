@@ -256,6 +256,8 @@ extension Coin {
         case .callisto: return RPCServer.callisto
         case .poa: return RPCServer.poa
         case .moac: return RPCServer.moac
+        case .moacTestnet: return RPCServer.moacTestnet
+        case .moacLocalPrivate: return RPCServer.moacLocalPrivate
         case .testnetAllCoins: return RPCServer.moacTestnet
         }
     }
