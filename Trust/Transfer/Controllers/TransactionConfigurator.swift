@@ -113,7 +113,7 @@ final class TransactionConfigurator {
         let request = EstimateGasRequest(
             transaction: signTransaction
         )
-        Session.send(EtherServiceRequest(for: server, batch: BatchFactory().create(request))) { result in
+        Session.send(MoacServiceRequest(for: server, batch: BatchFactory().create(request))) { result in
             switch result {
             case .success(let gasLimit):
                 let gasLimit: BigInt = {

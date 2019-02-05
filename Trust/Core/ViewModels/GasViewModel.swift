@@ -7,13 +7,13 @@ struct GasViewModel {
     let fee: BigInt
     let server: RPCServer
     let store: TokensDataStore
-    let formatter: EtherNumberFormatter
+    let formatter: MoacNumberFormatter
 
     init(
         fee: BigInt,
         server: RPCServer,
         store: TokensDataStore,
-        formatter: EtherNumberFormatter = .full
+        formatter: MoacNumberFormatter = .full
     ) {
         self.fee = fee
         self.server = server

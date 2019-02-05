@@ -14,7 +14,7 @@ class ConfigureTransactionViewController: FormViewController {
     let config: Config
     let transfer: Transfer
     let session: WalletSession
-    private let fullFormatter = EtherNumberFormatter.full
+    private let fullFormatter = MoacNumberFormatter.full
 
     struct Values {
         static let gasPrice = "gasPrice"
@@ -93,7 +93,7 @@ class ConfigureTransactionViewController: FormViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let gasPriceGwei = EtherNumberFormatter.full.string(from: configuration.gasPrice, units: UnitConfiguration.gasPriceUnit)
+        let gasPriceGwei = MoacNumberFormatter.full.string(from: configuration.gasPrice, units: UnitConfiguration.gasPriceUnit)
 
         form = Section(
             footer: viewModel.gasPriceFooterText

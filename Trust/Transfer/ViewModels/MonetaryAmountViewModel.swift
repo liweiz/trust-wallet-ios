@@ -8,13 +8,13 @@ struct MonetaryAmountViewModel {
     let amount: String
     let contract: Address
     let session: WalletSession
-    let formatter: EtherNumberFormatter
+    let formatter: MoacNumberFormatter
 
     init(
         amount: String,
         contract: Address,
         session: WalletSession,
-        formatter: EtherNumberFormatter = .full
+        formatter: MoacNumberFormatter = .full
     ) {
         self.amount = amount
         self.contract = contract

@@ -21,8 +21,8 @@ struct TransactionDetailsViewModel {
     private let transaction: Transaction
     private let config: Config
     private let chainState: ChainState
-    private let shortFormatter = EtherNumberFormatter.short
-    private let fullFormatter = EtherNumberFormatter.full
+    private let shortFormatter = MoacNumberFormatter.short
+    private let fullFormatter = MoacNumberFormatter.full
     private let session: WalletSession
     private let server: RPCServer
     private let token: TokenObject

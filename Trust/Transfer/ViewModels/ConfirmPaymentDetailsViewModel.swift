@@ -9,8 +9,8 @@ struct ConfirmPaymentDetailsViewModel {
     let session: WalletSession
     let config: Config
     let server: RPCServer
-    private let fullFormatter = EtherNumberFormatter.full
-    private let balanceFormatter = EtherNumberFormatter.balance
+    private let fullFormatter = MoacNumberFormatter.full
+    private let balanceFormatter = MoacNumberFormatter.balance
     private var monetaryAmountViewModel: MonetaryAmountViewModel {
         return MonetaryAmountViewModel(
             amount: amount,

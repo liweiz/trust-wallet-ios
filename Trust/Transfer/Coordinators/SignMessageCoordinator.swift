@@ -9,7 +9,7 @@ import Result
 enum SignMesageType {
     case message(Data)
     case personalMessage(Data)
-    case typedMessage([EthTypedData])
+    case typedMessage([McTypedData])
 }
 
 protocol SignMessageCoordinatorDelegate: class {

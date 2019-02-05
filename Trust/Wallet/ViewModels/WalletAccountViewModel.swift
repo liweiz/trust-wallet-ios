@@ -11,7 +11,7 @@ struct WalletAccountViewModel {
     let wallet: WalletInfo
     let account: Account
     let currentWallet: WalletInfo?
-    private let shortFormatter = EtherNumberFormatter.short
+    private let shortFormatter = MoacNumberFormatter.short
 
     var title: String {
         if wallet.multiWallet {

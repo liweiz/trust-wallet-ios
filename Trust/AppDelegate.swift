@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
         sharedMigration.perform()
         let realm = try! Realm(configuration: sharedMigration.config)
         let walletStorage = WalletStorage(realm: realm)
-        let keystore = EtherKeystore(storage: walletStorage)
+        let keystore = MoacKeystore(storage: walletStorage)
 
         coordinator = AppCoordinator(window: window!, keystore: keystore, navigator: urlNavigatorCoordinator)
         coordinator.start()

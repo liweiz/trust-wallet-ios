@@ -17,7 +17,7 @@ class MoacTransactionsProvider: TransactionsNetworkProvider {
 
     func update(for transaction: Transaction, completion: @escaping (Result<(Transaction, TransactionState), AnyError>) -> Void) {
         let request = GetTransactionRequest(hash: transaction.id)
-        Session.send(EtherServiceRequest(for: server, batch: BatchFactory().create(request))) { [weak self] result in
+        Session.send(MoacServiceRequest(for: server, batch: BatchFactory().create(request))) { [weak self] result in
             guard let `self` = self else { return }
             switch result {
             case .success(let tx):
@@ -50,7 +50,7 @@ class MoacTransactionsProvider: TransactionsNetworkProvider {
 
     private func getReceipt(for transaction: Transaction, completion: @escaping (Result<(Transaction, TransactionState), AnyError>) -> Void) {
         let request = GetTransactionReceiptRequest(hash: transaction.id)
-        Session.send(EtherServiceRequest(for: server, batch: BatchFactory().create(request))) { result in
+        Session.send(MoacServiceRequest(for: server, batch: BatchFactory().create(request))) { result in
             switch result {
             case .success(let receipt):
                 let newTransaction = transaction

@@ -2,9 +2,9 @@
 
 import Foundation
 
-extension EtherNumberFormatter {
-    static let balance: EtherNumberFormatter = {
-        let formatter = EtherNumberFormatter()
+extension MoacNumberFormatter {
+    static let balance: MoacNumberFormatter = {
+        let formatter = MoacNumberFormatter()
         formatter.maximumFractionDigits = 7
         return formatter
     }()

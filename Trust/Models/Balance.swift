@@ -16,10 +16,10 @@ struct Balance: BalanceProtocol {
     }
 
     var amountShort: String {
-        return EtherNumberFormatter.short.string(from: value)
+        return MoacNumberFormatter.short.string(from: value)
     }
 
     var amountFull: String {
-        return EtherNumberFormatter.full.string(from: value)
+        return MoacNumberFormatter.full.string(from: value)
     }
 }

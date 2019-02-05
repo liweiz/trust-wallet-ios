@@ -10,7 +10,7 @@ final class SendTransactionCoordinator {
 
     private let keystore: Keystore
     let session: WalletSession
-    let formatter = EtherNumberFormatter.full
+    let formatter = MoacNumberFormatter.full
     let confirmType: ConfirmType
     let server: RPCServer
 
@@ -33,7 +33,7 @@ final class SendTransactionCoordinator {
         if transaction.nonce >= 0 {
             signAndSend(transaction: transaction, completion: completion)
         } else {
-            let request = EtherServiceRequest(for: server, batch: BatchFactory().create(GetTransactionCountRequest(
+            let request = MoacServiceRequest(for: server, batch: BatchFactory().create(GetTransactionCountRequest(
                 address: transaction.account.address.description,
                 state: "latest"
             )))
@@ -90,7 +90,7 @@ final class SendTransactionCoordinator {
         case .sign:
             completion(.success(.sentTransaction(sentTransaction)))
         case .signThenSend:
-            let request = EtherServiceRequest(for: server, batch: BatchFactory().create(SendRawTransactionRequest(signedTransaction: dataHex)))
+            let request = MoacServiceRequest(for: server, batch: BatchFactory().create(SendRawTransactionRequest(signedTransaction: dataHex)))
             Session.send(request) { result in
                 switch result {
                 case .success:

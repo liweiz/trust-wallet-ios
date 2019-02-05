@@ -25,7 +25,7 @@ enum ConfigureTransactionError: LocalizedError {
                     value: "Gas Fee is too high. Max available: %@ %@",
                     comment: ""
                 ),
-                EtherNumberFormatter.full.string(from: ConfigureTransaction.gasFeeMax),
+                MoacNumberFormatter.full.string(from: ConfigureTransaction.gasFeeMax),
                 server.symbol
             )
         }

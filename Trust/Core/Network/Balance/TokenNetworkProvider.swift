@@ -29,7 +29,7 @@ final class TokenNetworkProvider: BalanceNetworkProvider {
     func balance() -> Promise<BigInt> {
         return Promise { seal in
             let encoded = ERC20Encoder.encodeBalanceOf(address: address)
-            let request = EtherServiceRequest(
+            let request = MoacServiceRequest(
                 for: server,
                 batch: BatchFactory().create(CallRequest(to: contract.description, data: encoded.hexEncoded))
             )

@@ -10,9 +10,9 @@ struct TransactionViewModel {
     private let transaction: Transaction
     private let config: Config
     private let currentAccount: Account
-    private let shortFormatter = EtherNumberFormatter.short
-    private let balanceFormatter = EtherNumberFormatter.balance
-    private let fullFormatter = EtherNumberFormatter.full
+    private let shortFormatter = MoacNumberFormatter.short
+    private let balanceFormatter = MoacNumberFormatter.balance
+    private let fullFormatter = MoacNumberFormatter.full
     private let server: RPCServer
     private let token: TokenObject
 
@@ -74,7 +74,7 @@ struct TransactionViewModel {
         }
     }
 
-    private func transactionValue(for formatter: EtherNumberFormatter) -> TransactionValue {
+    private func transactionValue(for formatter: MoacNumberFormatter) -> TransactionValue {
         switch token.type {
         case .coin:
             return transactionValue
@@ -91,7 +91,7 @@ struct TransactionViewModel {
 
     private var transactionValue: TransactionValue {
         return TransactionValue(
-            amount: EtherNumberFormatter.short.string(from: BigInt(transaction.value) ?? BigInt()),
+            amount: MoacNumberFormatter.short.string(from: BigInt(transaction.value) ?? BigInt()),
             symbol: server.symbol
         )
     }

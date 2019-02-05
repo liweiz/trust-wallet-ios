@@ -6,7 +6,7 @@ import BigInt
 
 struct TokenViewCellViewModel {
 
-    private let shortFormatter = EtherNumberFormatter.short
+    private let shortFormatter = MoacNumberFormatter.short
     let viewModel: TokenObjectViewModel
     private let ticker: CoinTicker?
     let store: TransactionsStorage

@@ -12,7 +12,7 @@ struct TransactionCellViewModel {
     private let chainState: ChainState
     private let currentAccount: Account
     private let token: TokenObject
-    private let shortFormatter = EtherNumberFormatter.short
+    private let shortFormatter = MoacNumberFormatter.short
 
     private let transactionViewModel: TransactionViewModel
 

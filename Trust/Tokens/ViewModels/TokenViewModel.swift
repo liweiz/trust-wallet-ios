@@ -8,7 +8,7 @@ import TrustCore
 
 final class TokenViewModel {
 
-    private let shortFormatter = EtherNumberFormatter.short
+    private let shortFormatter = MoacNumberFormatter.short
     private let config: Config
     private let store: TokensDataStore
     private let session: WalletSession

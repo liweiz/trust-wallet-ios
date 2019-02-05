@@ -25,7 +25,7 @@ final class CoinNetworkProvider: BalanceNetworkProvider {
 
     func balance() -> Promise<BigInt> {
         return Promise { seal in
-            let request = EtherServiceRequest(for: server, batch: BatchFactory().create(BalanceRequest(address: address.description)))
+            let request = MoacServiceRequest(for: server, batch: BatchFactory().create(BalanceRequest(address: address.description)))
             Session.send(request) { result in
                 switch result {
                 case .success(let balance):

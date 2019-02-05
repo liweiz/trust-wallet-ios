@@ -12,8 +12,8 @@ final class CurrencyFormatter {
         return formatter
     }
 
-    static var plainFormatter: EtherNumberFormatter {
-        let formatter = EtherNumberFormatter.full
+    static var plainFormatter: MoacNumberFormatter {
+        let formatter = MoacNumberFormatter.full
         formatter.groupingSeparator = ""
         return formatter
     }

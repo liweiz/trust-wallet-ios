@@ -102,8 +102,8 @@ struct SendViewModel {
     mutating func sendMaxAmount() -> String {
         var max: Decimal? = 0
         switch transfer.type {
-        case .ether, .dapp: max = EtherNumberFormatter.full.decimal(from: balance?.value ?? 0, decimals: decimals)
-        case .token(let token): max = EtherNumberFormatter.full.decimal(from: token.valueBigInt, decimals: decimals)
+        case .ether, .dapp: max = MoacNumberFormatter.full.decimal(from: balance?.value ?? 0, decimals: decimals)
+        case .token(let token): max = MoacNumberFormatter.full.decimal(from: token.valueBigInt, decimals: decimals)
         }
         guard let maxAmount = max else {
             return ""
