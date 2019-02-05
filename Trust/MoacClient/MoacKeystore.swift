@@ -8,11 +8,11 @@ import CryptoSwift
 import TrustCore
 import TrustKeystore
 
-enum EtherKeystoreError: LocalizedError {
+enum MoacKeystoreError: LocalizedError {
     case protectionDisabled
 }
 
-class EtherKeystore: Keystore {
+class MoacKeystore: Keystore {
     struct Keys {
         static let recentlyUsedAddress: String = "recentlyUsedAddress"
         static let recentlyUsedWallet: String = "recentlyUsedWallet"
@@ -330,7 +330,7 @@ class EtherKeystore: Keystore {
     }
 
     func signPersonalMessage(_ message: Data, for account: Account) -> Result<Data, KeystoreError> {
-        let prefix = "\u{19}Ethereum Signed Message:\n\(message.count)".data(using: .utf8)!
+        let prefix = "\u{19}Moac Signed Message:\n\(message.count)".data(using: .utf8)!
         return signMessage(prefix + message, for: account)
     }
 
@@ -338,7 +338,7 @@ class EtherKeystore: Keystore {
         return signHash(message.sha3(.keccak256), for: account)
     }
 
-    func signTypedMessage(_ datas: [EthTypedData], for account: Account) -> Result<Data, KeystoreError> {
+    func signTypedMessage(_ datas: [McTypedData], for account: Account) -> Result<Data, KeystoreError> {
         let schemas = datas.map { $0.schemaData }.reduce(Data(), { $0 + $1 }).sha3(.keccak256)
         let values = datas.map { $0.typedData }.reduce(Data(), { $0 + $1 }).sha3(.keccak256)
         let combined = (schemas + values).sha3(.keccak256)

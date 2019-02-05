@@ -4,7 +4,7 @@ import Foundation
 import APIKit
 import JSONRPCKit
 
-struct EtherServiceRequest<Batch: JSONRPCKit.Batch>: APIKit.Request {
+struct MoacServiceRequest<Batch: JSONRPCKit.Batch>: APIKit.Request {
     let batch: Batch
     let server: RPCServer
     typealias Response = Batch.Responses

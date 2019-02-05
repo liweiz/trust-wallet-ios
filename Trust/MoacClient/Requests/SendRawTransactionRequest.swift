@@ -1,29 +1,26 @@
 // Copyright DApps Platform Inc. All rights reserved.
 
-import BigInt
 import Foundation
 import JSONRPCKit
 
-struct GetTransactionCountRequest: JSONRPCKit.Request {
-    typealias Response = BigInt
+struct SendRawTransactionRequest: JSONRPCKit.Request {
+    typealias Response = String
 
-    let address: String
-    let state: String
+    let signedTransaction: String
 
     var method: String {
-        return "eth_getTransactionCount"
+        return "mc_sendRawTransaction"
     }
 
     var parameters: Any? {
         return [
-            address,
-            state,
+            signedTransaction,
         ]
     }
 
     func response(from resultObject: Any) throws -> Response {
-        if let response = resultObject as? String {
-            return BigInt(response.drop0x, radix: 16) ?? BigInt()
+        if let response = resultObject as? Response {
+            return response
         } else {
             throw CastError(actualValue: resultObject, expectedType: Response.self)
         }

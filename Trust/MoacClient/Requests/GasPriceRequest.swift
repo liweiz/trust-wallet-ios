@@ -3,18 +3,11 @@
 import Foundation
 import JSONRPCKit
 
-struct CallRequest: JSONRPCKit.Request {
+struct GasPriceRequest: JSONRPCKit.Request {
     typealias Response = String
 
-    let to: String
-    let data: String
-
     var method: String {
-        return "eth_call"
-    }
-
-    var parameters: Any? {
-        return [["to": to, "data": data], "latest"]
+        return "mc_gasPrice"
     }
 
     func response(from resultObject: Any) throws -> Response {

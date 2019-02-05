@@ -32,11 +32,11 @@
 		291ED08D1F6F5F0A00E7E93A /* KeyStoreError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 291ED08C1F6F5F0A00E7E93A /* KeyStoreError.swift */; };
 		291ED08F1F6F613200E7E93A /* GetTransactionRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 291ED08E1F6F613200E7E93A /* GetTransactionRequest.swift */; };
 		291ED0921F6FA5D900E7E93A /* RequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 291ED0911F6FA5D900E7E93A /* RequestViewController.swift */; };
-		291F52A51F6B762300B369AB /* EtherServiceRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 291F52A41F6B762300B369AB /* EtherServiceRequest.swift */; };
+		291F52A51F6B762300B369AB /* MoacServiceRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 291F52A41F6B762300B369AB /* MoacServiceRequest.swift */; };
 		291F52A71F6B766100B369AB /* BalanceRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 291F52A61F6B766100B369AB /* BalanceRequest.swift */; };
 		291F52A91F6B7BE100B369AB /* BlockNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 291F52A81F6B7BE100B369AB /* BlockNumber.swift */; };
 		291F52B71F6B870400B369AB /* CastError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 291F52B61F6B870400B369AB /* CastError.swift */; };
-		291F52B91F6B880F00B369AB /* EtherKeystore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 291F52B81F6B880F00B369AB /* EtherKeystore.swift */; };
+		291F52B91F6B880F00B369AB /* MoacKeystore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 291F52B81F6B880F00B369AB /* MoacKeystore.swift */; };
 		291F9EA020FF3C6B00D5266A /* DeveloperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 291F9E9F20FF3C6B00D5266A /* DeveloperViewController.swift */; };
 		291F9EA3211408F600D5266A /* PreviewTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 291F9EA2211408F600D5266A /* PreviewTransaction.swift */; };
 		2923D9B11FDA49D8000CF3F8 /* Initializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2923D9B01FDA49D8000CF3F8 /* Initializer.swift */; };
@@ -461,7 +461,7 @@
 		BB8E747920818E5E001BA99A /* SearchTokenResultsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8E747820818E5E001BA99A /* SearchTokenResultsController.swift */; };
 		BBAA2A3B2058155100B0878C /* TypedMessageEncodingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBAA2A3A2058155100B0878C /* TypedMessageEncodingTests.swift */; };
 		BBB61E122050993A00428BBD /* BrowserErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB61E112050993A00428BBD /* BrowserErrorView.swift */; };
-		BBD4E416205654E4005545E9 /* EthTypedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD4E415205654E4005545E9 /* EthTypedData.swift */; };
+		BBD4E416205654E4005545E9 /* McTypedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD4E415205654E4005545E9 /* McTypedData.swift */; };
 		BBF4F9B72029D0B3009E04C0 /* GasViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF4F9B62029D0B2009E04C0 /* GasViewModel.swift */; };
 		CCA4FE331FD3655900749AE4 /* CheckDeviceCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA4FE321FD3655900749AE4 /* CheckDeviceCoordinatorTests.swift */; };
 		CCA4FE361FD4282400749AE4 /* DeviceChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA4FE351FD4282400749AE4 /* DeviceChecker.swift */; };
@@ -520,11 +520,11 @@
 		291ED08C1F6F5F0A00E7E93A /* KeyStoreError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyStoreError.swift; sourceTree = "<group>"; };
 		291ED08E1F6F613200E7E93A /* GetTransactionRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTransactionRequest.swift; sourceTree = "<group>"; };
 		291ED0911F6FA5D900E7E93A /* RequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestViewController.swift; sourceTree = "<group>"; };
-		291F52A41F6B762300B369AB /* EtherServiceRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EtherServiceRequest.swift; sourceTree = "<group>"; };
+		291F52A41F6B762300B369AB /* MoacServiceRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoacServiceRequest.swift; sourceTree = "<group>"; };
 		291F52A61F6B766100B369AB /* BalanceRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceRequest.swift; sourceTree = "<group>"; };
 		291F52A81F6B7BE100B369AB /* BlockNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockNumber.swift; sourceTree = "<group>"; };
 		291F52B61F6B870400B369AB /* CastError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastError.swift; sourceTree = "<group>"; };
-		291F52B81F6B880F00B369AB /* EtherKeystore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EtherKeystore.swift; sourceTree = "<group>"; };
+		291F52B81F6B880F00B369AB /* MoacKeystore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoacKeystore.swift; sourceTree = "<group>"; };
 		291F9E9F20FF3C6B00D5266A /* DeveloperViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeveloperViewController.swift; sourceTree = "<group>"; };
 		291F9EA2211408F600D5266A /* PreviewTransaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewTransaction.swift; sourceTree = "<group>"; };
 		2923D9B01FDA49D8000CF3F8 /* Initializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Initializer.swift; sourceTree = "<group>"; };
@@ -964,7 +964,7 @@
 		BB8E747820818E5E001BA99A /* SearchTokenResultsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTokenResultsController.swift; sourceTree = "<group>"; };
 		BBAA2A3A2058155100B0878C /* TypedMessageEncodingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypedMessageEncodingTests.swift; sourceTree = "<group>"; };
 		BBB61E112050993A00428BBD /* BrowserErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowserErrorView.swift; sourceTree = "<group>"; };
-		BBD4E415205654E4005545E9 /* EthTypedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EthTypedData.swift; sourceTree = "<group>"; };
+		BBD4E415205654E4005545E9 /* McTypedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = McTypedData.swift; sourceTree = "<group>"; };
 		BBF4F9B62029D0B2009E04C0 /* GasViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GasViewModel.swift; sourceTree = "<group>"; };
 		CCA4FE321FD3655900749AE4 /* CheckDeviceCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckDeviceCoordinatorTests.swift; sourceTree = "<group>"; };
 		CCA4FE351FD4282400749AE4 /* DeviceChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceChecker.swift; sourceTree = "<group>"; };
@@ -1058,7 +1058,7 @@
 				296106C01F7640240006164B /* Tokens */,
 				2912CD291F6A831D00C6CBE3 /* Transactions */,
 				2912CD281F6A831700C6CBE3 /* Wallet */,
-				291F52A01F6B6DBC00B369AB /* EtherClient */,
+				291F52A01F6B6DBC00B369AB /* MoacClient */,
 				291EC9E01F7053C80004EDD0 /* UI */,
 				29A13E311F6B1B6C00E432A2 /* Style */,
 				2996F14B1F6CA725005C33AE /* Extensions */,
@@ -1197,7 +1197,7 @@
 			path = Transfer;
 			sourceTree = "<group>";
 		};
-		291F52A01F6B6DBC00B369AB /* EtherClient */ = {
+		291F52A01F6B6DBC00B369AB /* MoacClient */ = {
 			isa = PBXGroup;
 			children = (
 				773B8DB320716E9C00D05690 /* Providers */,
@@ -1206,8 +1206,8 @@
 				2959961D1FAE756400DB66A8 /* TrustClient */,
 				291F52B61F6B870400B369AB /* CastError.swift */,
 				2961BD061FB146EB00C4B840 /* ChainState.swift */,
-				291F52B81F6B880F00B369AB /* EtherKeystore.swift */,
-				291F52A41F6B762300B369AB /* EtherServiceRequest.swift */,
+				291F52B81F6B880F00B369AB /* MoacKeystore.swift */,
+				291F52A41F6B762300B369AB /* MoacServiceRequest.swift */,
 				29F114ED1FA65DEF00114A29 /* ImportType.swift */,
 				29FF12FD1F75EA3F00AFD326 /* Keystore.swift */,
 				291ED08C1F6F5F0A00E7E93A /* KeyStoreError.swift */,
@@ -1215,7 +1215,7 @@
 				61C359DF2002AA590097B04D /* TransactionSigning.swift */,
 				BB3E2A0C20A04F2C000F8B76 /* ENS */,
 			);
-			path = EtherClient;
+			path = MoacClient;
 			sourceTree = "<group>";
 		};
 		291F52A31F6B760A00B369AB /* Requests */ = {
@@ -2226,7 +2226,7 @@
 			isa = PBXGroup;
 			children = (
 				771D53622050AFC700C79485 /* WalletType.swift */,
-				BBD4E415205654E4005545E9 /* EthTypedData.swift */,
+				BBD4E415205654E4005545E9 /* McTypedData.swift */,
 			);
 			path = Types;
 			sourceTree = "<group>";
@@ -2912,7 +2912,7 @@
 				779141DB21055B72007E8E16 /* MultiCoinMigration.swift in Sources */,
 				29FC9BC61F830899000209CD /* MirgrationInitializer.swift in Sources */,
 				29AD8A091F93F8B2008E10E7 /* Session.swift in Sources */,
-				291F52B91F6B880F00B369AB /* EtherKeystore.swift in Sources */,
+				291F52B91F6B880F00B369AB /* MoacKeystore.swift in Sources */,
 				779141CA210271DB007E8E16 /* BalanceNetworkProvider.swift in Sources */,
 				29BB94971F6FCD60009B09CC /* SendViewModel.swift in Sources */,
 				296106D01F778A8D0006164B /* TransferType.swift in Sources */,
@@ -3069,7 +3069,7 @@
 				290B2B671F9266630053C83E /* SettingsAction.swift in Sources */,
 				293E626F1FA2ED1400CB0A66 /* InCoordinator.swift in Sources */,
 				77EAD88A20E4803D00D14AA2 /* PassphraseBackgroundShadow.swift in Sources */,
-				BBD4E416205654E4005545E9 /* EthTypedData.swift in Sources */,
+				BBD4E416205654E4005545E9 /* McTypedData.swift in Sources */,
 				29E9CFCB1FE70D5B00017744 /* TokensBalanceService.swift in Sources */,
 				2963A2881FC401490095447D /* ERC20Contract.swift in Sources */,
 				2928500C2096A34900EC5AFB /* AboutViewController.swift in Sources */,
@@ -3095,7 +3095,7 @@
 				77CB839A206CEED7006F34A8 /* Size.swift in Sources */,
 				294DFBA91FE6EBFB004CEB56 /* NewTokenViewController.swift in Sources */,
 				29B933F51F860074009FCABB /* SendTransactionCoordinator.swift in Sources */,
-				291F52A51F6B762300B369AB /* EtherServiceRequest.swift in Sources */,
+				291F52A51F6B762300B369AB /* MoacServiceRequest.swift in Sources */,
 				CCA4FE361FD4282400749AE4 /* DeviceChecker.swift in Sources */,
 				732086B9201508690047F605 /* SplashCoordinator.swift in Sources */,
 				77872D292025116E0032D687 /* EnterPasswordCoordinator.swift in Sources */,

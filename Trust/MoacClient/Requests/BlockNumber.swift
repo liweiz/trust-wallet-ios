@@ -8,7 +8,7 @@ struct BlockNumberRequest: JSONRPCKit.Request {
     typealias Response = Int
 
     var method: String {
-        return "eth_blockNumber"
+        return "mc_blockNumber"
     }
 
     func response(from resultObject: Any) throws -> Response {

@@ -4,22 +4,26 @@ import BigInt
 import Foundation
 import JSONRPCKit
 
-struct BalanceRequest: JSONRPCKit.Request {
-    typealias Response = Balance
+struct GetTransactionCountRequest: JSONRPCKit.Request {
+    typealias Response = BigInt
 
     let address: String
+    let state: String
 
     var method: String {
-        return "eth_getBalance"
+        return "mc_getTransactionCount"
     }
 
     var parameters: Any? {
-        return [address, "latest"]
+        return [
+            address,
+            state,
+        ]
     }
 
     func response(from resultObject: Any) throws -> Response {
-        if let response = resultObject as? String, let value = BigInt(response.drop0x, radix: 16) {
-            return Balance(value: value)
+        if let response = resultObject as? String {
+            return BigInt(response.drop0x, radix: 16) ?? BigInt()
         } else {
             throw CastError(actualValue: resultObject, expectedType: Response.self)
         }

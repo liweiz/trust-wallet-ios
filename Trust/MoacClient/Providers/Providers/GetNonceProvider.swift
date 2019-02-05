@@ -68,7 +68,7 @@ final class GetNonceProvider: NonceProvider {
     }
 
     func fetch(completion: @escaping (Result<BigInt, AnyError>) -> Void) {
-        let request = EtherServiceRequest(for: server, batch: BatchFactory().create(GetTransactionCountRequest(
+        let request = MoacServiceRequest(for: server, batch: BatchFactory().create(GetTransactionCountRequest(
             address: address.description,
             state: "latest"
         )))

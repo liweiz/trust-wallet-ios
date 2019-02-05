@@ -54,7 +54,7 @@ enum SolidityJSONValue: Decodable {
     }
 }
 
-struct EthTypedData: Decodable {
+struct McTypedData: Decodable {
     //for signTypedMessage
     let type: String
     let name: String

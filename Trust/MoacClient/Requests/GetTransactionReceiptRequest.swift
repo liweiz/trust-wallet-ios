@@ -15,7 +15,7 @@ struct GetTransactionReceiptRequest: JSONRPCKit.Request {
 
     let hash: String
     var method: String {
-        return "eth_getTransactionReceipt"
+        return "mc_getTransactionReceipt"
     }
     var parameters: Any? {
         return [hash]

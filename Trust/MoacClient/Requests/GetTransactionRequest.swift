@@ -10,7 +10,7 @@ struct GetTransactionRequest: JSONRPCKit.Request {
     let hash: String
 
     var method: String {
-        return "eth_getTransactionByHash"
+        return "mc_getTransactionByHash"
     }
 
     var parameters: Any? {

@@ -62,7 +62,7 @@ final class ChainState {
     }
 
     private func getLastBlock() {
-        let request = EtherServiceRequest(for: server, batch: BatchFactory().create(BlockNumberRequest()), timeoutInterval: 5.0)
+        let request = MoacServiceRequest(for: server, batch: BatchFactory().create(BlockNumberRequest()), timeoutInterval: 5.0)
         Session.send(request) { [weak self] result in
             guard let `self` = self else { return }
             switch result {
@@ -76,7 +76,7 @@ final class ChainState {
     }
 
     private func getGasPrice() {
-        let request = EtherServiceRequest(for: server, batch: BatchFactory().create(GasPriceRequest()))
+        let request = MoacServiceRequest(for: server, batch: BatchFactory().create(GasPriceRequest()))
         Session.send(request) { [weak self] result in
             switch result {
             case .success(let balance):

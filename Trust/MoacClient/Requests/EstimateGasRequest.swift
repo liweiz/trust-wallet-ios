@@ -11,7 +11,7 @@ struct EstimateGasRequest: JSONRPCKit.Request {
     let transaction: SignTransaction
 
     var method: String {
-        return "eth_estimateGas"
+        return "mc_estimateGas"
     }
 
     var parameters: Any? {
