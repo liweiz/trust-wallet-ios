@@ -2,20 +2,20 @@
 
 import Foundation
 
-public enum EthereumUnit: Int64 {
-    case wei = 1
-    case kwei = 1_000
-    case gwei = 1_000_000_000
-    case ether = 1_000_000_000_000_000_000
+public enum MoacUnit: Int64 {
+    case sha = 1
+    case ksha = 1_000
+    case gsha = 1_000_000_000
+    case mc = 1_000_000_000_000_000_000
 }
 
-extension EthereumUnit {
+extension MoacUnit {
     var name: String {
         switch self {
-        case .wei: return "Wei"
-        case .kwei: return "Kwei"
-        case .gwei: return "Gwei"
-        case .ether: return "Ether"
+        case .sha: return "Sha"
+        case .ksha: return "Ksha"
+        case .gsha: return "Gsha"
+        case .mc: return "MC"
         }
     }
 }

@@ -221,7 +221,7 @@ final class ImportWalletViewController: FormViewController {
 
     @objc func demo() {
         //Used for taking screenshots to the App Store by snapshot
-        let demoWallet = WalletType.address(Coin.ethereum, MoacAddress(string: "0xD663bE6b87A992C5245F054D32C7f5e99f5aCc47")!)
+        let demoWallet = WalletType.address(Coin.moac, MoacAddress(string: "0xD663bE6b87A992C5245F054D32C7f5e99f5aCc47")!)
         let walletInfo = WalletInfo(type: demoWallet, info: WalletObject.from(demoWallet))
         delegate?.didImportAccount(account: walletInfo, fields: [], in: self)
     }

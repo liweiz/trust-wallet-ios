@@ -34,10 +34,10 @@ struct QRURLParser {
     }
 
     private static func getAddress(from: String?) -> String? {
-        guard let from = from, from.count >= AddressValidatorType.ethereum.addressLength else {
+        guard let from = from, from.count >= AddressValidatorType.moac.addressLength else {
             return .none
         }
-        return from.substring(to: AddressValidatorType.ethereum.addressLength)
+        return from.substring(to: AddressValidatorType.moac.addressLength)
     }
 
     private static func parseParamsFromParamParts(paramParts: [String]) -> [String: String] {

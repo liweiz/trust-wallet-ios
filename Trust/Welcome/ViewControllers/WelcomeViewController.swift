@@ -65,7 +65,7 @@ final class WelcomeViewController: UIViewController {
         ),
         OnboardingPageViewModel(
             title: NSLocalizedString("welcome.ultraReliable.label.title", value: "Ultra Reliable", comment: ""),
-            subtitle: NSLocalizedString("welcome.ultraReliable.label.description", value: "The fastest Ethereum wallet experience on mobile", comment: ""),
+            subtitle: NSLocalizedString("welcome.ultraReliable.label.description", value: "The fastest Moac wallet experience on mobile", comment: ""),
             image: R.image.onboarding_rocket()!
         ),
     ]

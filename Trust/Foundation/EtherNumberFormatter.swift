@@ -3,13 +3,13 @@
 import BigInt
 import Foundation
 
-final class EtherNumberFormatter {
+final class MoacNumberFormatter {
     /// Formatter that preserves full precision.
-    static let full = EtherNumberFormatter()
+    static let full = MoacNumberFormatter()
 
     // Formatter that caps the number of decimal digits to 4.
-    static let short: EtherNumberFormatter = {
-        let formatter = EtherNumberFormatter()
+    static let short: MoacNumberFormatter = {
+        let formatter = MoacNumberFormatter()
         formatter.maximumFractionDigits = 4
         return formatter
     }()
@@ -25,10 +25,10 @@ final class EtherNumberFormatter {
 
     /// Thousands separator.
     var groupingSeparator = ","
-    
+
     let locale: Locale
 
-    /// Initializes a `EtherNumberFormatter` with a `Locale`.
+    /// Initializes a `MoacNumberFormatter` with a `Locale`.
     init(locale: Locale = .current) {
         self.locale = locale
         decimalSeparator = locale.decimalSeparator ?? "."
@@ -41,7 +41,7 @@ final class EtherNumberFormatter {
     ///   - string: string to convert
     ///   - units: units to use
     /// - Returns: `BigInt` represenation.
-    func number(from string: String, units: EthereumUnit = .ether) -> BigInt? {
+    func number(from string: String, units: MoacUnit = .mc) -> BigInt? {
         let decimals = Int(log10(Double(units.rawValue)))
         return number(from: string, decimals: decimals)
     }
@@ -84,7 +84,7 @@ final class EtherNumberFormatter {
     ///   - number: number to format
     ///   - units: units to use
     /// - Returns: string representation
-    func string(from number: BigInt, units: EthereumUnit = .ether) -> String {
+    func string(from number: BigInt, units: MoacUnit = .mc) -> String {
         let decimals = Int(log10(Double(units.rawValue)))
         return string(from: number, decimals: decimals)
     }

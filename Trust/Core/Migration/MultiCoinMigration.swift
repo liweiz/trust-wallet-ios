@@ -72,7 +72,7 @@ class MultiCoinMigration {
         let addresses = watchAddresses.compactMap {
             MoacAddress(string: $0)
         }.compactMap {
-            WalletAddress(coin: .ethereum, address: $0)
+            WalletAddress(coin: .moac, address: $0)
         }
         keystore.storage.store(address: addresses)
         return true

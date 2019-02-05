@@ -77,10 +77,10 @@ final class ImportMainWalletViewController: FormViewController {
 
         displayLoading(text: R.string.localizable.importWalletImportingIndicatorLabelTitle(), animated: false)
 
-        let importType = ImportType.mnemonic(words: words, password: password, derivationPath: Coin.ethereum.derivationPath(at: 0))
+        let importType = ImportType.mnemonic(words: words, password: password, derivationPath: Coin.moac.derivationPath(at: 0))
 
         DispatchQueue.global(qos: .userInitiated).async {
-            self.keystore.importWallet(type: importType, coin: .ethereum) { result in
+            self.keystore.importWallet(type: importType, coin: .moac) { result in
                 switch result {
                 case .success(let account):
                     self.addWallets(wallet: account)

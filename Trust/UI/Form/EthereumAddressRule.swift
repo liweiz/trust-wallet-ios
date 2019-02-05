@@ -5,7 +5,7 @@ import Eureka
 
 public struct MoacAddressRule<T: Equatable>: RuleType {
 
-    public init(msg: String = "Invalid Ethereum Address") {
+    public init(msg: String = "Invalid Moac Address") {
         self.validationError = ValidationError(msg: msg)
     }
 

@@ -390,7 +390,7 @@
 		779141C8210271BE007E8E16 /* TokenNetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779141C7210271BE007E8E16 /* TokenNetworkProvider.swift */; };
 		779141CA210271DB007E8E16 /* BalanceNetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779141C9210271DB007E8E16 /* BalanceNetworkProvider.swift */; };
 		779141CD21027CB4007E8E16 /* TransactionsNetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779141CC21027CB4007E8E16 /* TransactionsNetworkProvider.swift */; };
-		779141CF21027CE8007E8E16 /* EthereumTransactionsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779141CE21027CE8007E8E16 /* EthereumTransactionsProvider.swift */; };
+		779141CF21027CE8007E8E16 /* MoacTransactionsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779141CE21027CE8007E8E16 /* MoacTransactionsProvider.swift */; };
 		779141D22102F44D007E8E16 /* WalletViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779141D12102F44D007E8E16 /* WalletViewController.swift */; };
 		779141D621040B63007E8E16 /* TrustRequestFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779141D521040B63007E8E16 /* TrustRequestFormatter.swift */; };
 		779141D821045571007E8E16 /* WalletCreatedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779141D721045571007E8E16 /* WalletCreatedViewModel.swift */; };
@@ -890,7 +890,7 @@
 		779141C7210271BE007E8E16 /* TokenNetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenNetworkProvider.swift; sourceTree = "<group>"; };
 		779141C9210271DB007E8E16 /* BalanceNetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceNetworkProvider.swift; sourceTree = "<group>"; };
 		779141CC21027CB4007E8E16 /* TransactionsNetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsNetworkProvider.swift; sourceTree = "<group>"; };
-		779141CE21027CE8007E8E16 /* EthereumTransactionsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EthereumTransactionsProvider.swift; sourceTree = "<group>"; };
+		779141CE21027CE8007E8E16 /* MoacTransactionsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoacTransactionsProvider.swift; sourceTree = "<group>"; };
 		779141D12102F44D007E8E16 /* WalletViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletViewController.swift; sourceTree = "<group>"; };
 		779141D521040B63007E8E16 /* TrustRequestFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrustRequestFormatter.swift; sourceTree = "<group>"; };
 		779141D721045571007E8E16 /* WalletCreatedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletCreatedViewModel.swift; sourceTree = "<group>"; };
@@ -2370,7 +2370,7 @@
 			isa = PBXGroup;
 			children = (
 				779141CC21027CB4007E8E16 /* TransactionsNetworkProvider.swift */,
-				779141CE21027CE8007E8E16 /* EthereumTransactionsProvider.swift */,
+				779141CE21027CE8007E8E16 /* MoacTransactionsProvider.swift */,
 			);
 			path = Transactions;
 			sourceTree = "<group>";
@@ -2893,7 +2893,7 @@
 				290B2B5F1F9177860053C83E /* UIImage.swift in Sources */,
 				291ED08F1F6F613200E7E93A /* GetTransactionRequest.swift in Sources */,
 				77DC39E42118C49A003512F9 /* TokenImage.swift in Sources */,
-				779141CF21027CE8007E8E16 /* EthereumTransactionsProvider.swift in Sources */,
+				779141CF21027CE8007E8E16 /* MoacTransactionsProvider.swift in Sources */,
 				294EC1DA1FD8E4E60065EB20 /* GasPriceRequest.swift in Sources */,
 				903682F8204AC52F00013479 /* BookmarksViewModel.swift in Sources */,
 				299B5E2D1FCBC0660051361C /* BalanceProtocol.swift in Sources */,

@@ -9,7 +9,7 @@ final class WalletAddress: Object {
     @objc dynamic var addressString: String = ""
     @objc private dynamic var rawCoin = -1
     public var coin: Coin {
-        get { return Coin(rawValue: rawCoin) ?? .ethereum }
+        get { return Coin(rawValue: rawCoin) ?? .moac }
         set { rawCoin = newValue.rawValue }
     }
 

@@ -5,7 +5,7 @@ import Result
 import APIKit
 import JSONRPCKit
 
-class EthereumTransactionsProvider: TransactionsNetworkProvider {
+class MoacTransactionsProvider: TransactionsNetworkProvider {
 
     let server: RPCServer
 

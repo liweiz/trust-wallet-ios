@@ -47,6 +47,9 @@ struct Config {
             Coin.poa,
             Coin.callisto,
             Coin.gochain,
+            Coin.moac,
+            Coin.moacTestnet,
+            Coin.moacLocalPrivate
         ]
     }
 }

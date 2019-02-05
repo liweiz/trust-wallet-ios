@@ -54,8 +54,8 @@ final class TokenViewModel {
         return .white
     }()
 
-    lazy var transactionsProvider: EthereumTransactionsProvider = {
-        return EthereumTransactionsProvider(server: server)
+    lazy var transactionsProvider: MoacTransactionsProvider = {
+        return MoacTransactionsProvider(server: server)
     }()
 
     var amount: String {

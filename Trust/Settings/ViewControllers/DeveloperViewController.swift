@@ -62,8 +62,8 @@ final class DeveloperViewController: FormViewController {
     weak var delegate: DeveloperViewControllerDelegate?
 
     private struct Values {
-        static let ethereumNet = "ethereumNet"
-        static let ethereumTestNet = "ethereumTestNet"
+        static let moacNet = "moacNet"
+        static let moacTestNet = "moacTestNet"
     }
 
     override func viewDidLoad() {

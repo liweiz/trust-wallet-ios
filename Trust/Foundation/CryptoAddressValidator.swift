@@ -3,17 +3,17 @@
 import Foundation
 
 enum AddressValidatorType {
-    case ethereum
+    case moac
 
     var addressLength: Int {
         switch self {
-        case .ethereum: return 42
+        case .moac: return 42
         }
     }
 }
 
 struct CryptoAddressValidator {
-    static func isValidAddress(_ value: String?, type: AddressValidatorType = .ethereum) -> Bool {
+    static func isValidAddress(_ value: String?, type: AddressValidatorType = .moac) -> Bool {
         return value?.range(of: "^0x[a-fA-F0-9]{40}$", options: .regularExpression) != nil
     }
 }

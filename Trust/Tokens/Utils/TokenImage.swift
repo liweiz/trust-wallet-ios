@@ -48,6 +48,9 @@ extension Coin {
         case .ethereumClassic: return "ETC\n20"
         case .gochain: return "GO\n20"
         case .callisto: return "CLO\n20"
+        case .moac: return "MC\n20"
+        case .moacTestnet: return "MCt\n20"
+        case .moacLocalPrivate: return "EMClp\n20"
         default: return "ERC\n20"
         }
     }
