@@ -16,7 +16,7 @@ public struct SignTransaction {
     let chainID: Int
     let shardingFlag: BigInt
     let systemContract: BigInt
-    let via: MoacAddress
+    let via: MoacAddress?
 
     // additinalData
     let localizedObject: LocalizedOperationObject?

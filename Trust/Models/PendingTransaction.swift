@@ -14,6 +14,9 @@ struct PendingTransaction: Decodable {
     let hash: String
     let value: String
     let nonce: Int
+    let shardingFlag: String
+    let systemContract: String
+    let via: String
 }
 
 extension PendingTransaction {
@@ -27,6 +30,9 @@ extension PendingTransaction {
         let nonce = transaction["nonce"] as? String ?? "0"
         let from = transaction["from"] as? String ?? ""
         let to = transaction["to"] as? String ?? ""
+        let shardingFlag = transaction["shardingFlag"] as? String ?? ""
+        let systemContract = transaction["systemContract"] as? String ?? ""
+        let via = transaction["via"] as? String ?? ""
         return PendingTransaction(
             blockHash: blockHash,
             blockNumber: BigInt(blockNumber.drop0x, radix: 16)?.description ?? "",
@@ -36,7 +42,10 @@ extension PendingTransaction {
             gasPrice: BigInt(gasPrice.drop0x, radix: 16)?.description ?? "",
             hash: hash,
             value: BigInt(value.drop0x, radix: 16)?.description ?? "",
-            nonce: Int(BigInt(nonce.drop0x, radix: 16)?.description ?? "-1") ?? -1
+            nonce: Int(BigInt(nonce.drop0x, radix: 16)?.description ?? "-1") ?? -1,
+            shardingFlag: BigInt(shardingFlag.drop0x, radix: 16)?.description ?? "",
+            systemContract: BigInt(systemContract.drop0x, radix: 16)?.description ?? "",
+            via: via
         )
     }
 }
@@ -63,6 +72,9 @@ extension Transaction {
             gasPrice: transaction.gasPrice,
             gasUsed: "",
             nonce: transaction.nonce,
+            shardingFlag: transaction.shardingFlag,
+            systemContract: transaction.systemContract,
+            via: transaction.via,
             date: Date(),
             coin: coin,
             localizedOperations: Array(initialTransaction.localizedOperations),

@@ -18,6 +18,9 @@ public struct PreviewTransaction {
     let gasPrice: BigInt
     let gasLimit: BigInt
     let transfer: Transfer
+    let shardingFlag: BigInt
+    let systemContract: BigInt
+    let via: MoacAddress?
 }
 
 final class TransactionConfigurator {
@@ -189,7 +192,10 @@ final class TransactionConfigurator {
             data: configuration.data,
             gasPrice: configuration.gasPrice,
             gasLimit: configuration.gasLimit,
-            transfer: transaction.transfer
+            transfer: transaction.transfer,
+            shardingFlag: transaction.shardingFlag!,
+            systemContract: transaction.systemContract!,
+            via: transaction.via
         )
     }
 
@@ -232,7 +238,9 @@ final class TransactionConfigurator {
             gasPrice: configuration.gasPrice,
             gasLimit: configuration.gasLimit,
             chainID: server.chainID,
-            shardingFlag: configuration.
+            shardingFlag: transaction.shardingFlag!,
+            systemContract: transaction.systemContract!,
+            via: transaction.via!,
             localizedObject: localizedObject
         )
 
