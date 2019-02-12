@@ -50,6 +50,15 @@ extension DappAction {
             guard let value = object["gasPrice"]?.value else { return .none }
             return BigInt((value).drop0x, radix: 16)
         }()
+        let shardingFlag: BigInt? = {
+            guard let value = object["shardingFlag"]?.value else { return .none }
+            return BigInt((value).drop0x, radix: 16)
+        }()
+        let systemContract: BigInt? = {
+            guard let value = object["systemContract"]?.value else { return .none }
+            return BigInt((value).drop0x, radix: 16)
+        }()
+        let via = MoacAddress(string: object["via"]?.value ?? "")
         let data = Data(hex: object["data"]?.value ?? "0x")
 
         return UnconfirmedTransaction(
@@ -59,7 +68,10 @@ extension DappAction {
             data: data,
             gasLimit: gasLimit,
             gasPrice: gasPrice,
-            nonce: nonce
+            nonce: nonce,
+            shardingFlag: shardingFlag,
+            systemContract: systemContract,
+            via: via
         )
     }
 

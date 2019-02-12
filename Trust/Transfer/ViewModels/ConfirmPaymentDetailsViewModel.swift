@@ -38,7 +38,7 @@ struct ConfirmPaymentDetailsViewModel {
 
         var value: BigInt = totalFee
 
-        if case TransferType.ether(_) = transaction.transfer.type {
+        if case TransferType.moac(_) = transaction.transfer.type {
             value += transaction.value
         }
 
@@ -67,7 +67,7 @@ struct ConfirmPaymentDetailsViewModel {
         switch transaction.transfer.type {
         case .dapp:
             return NSLocalizedString("confirmPayment.dapp.label.title", value: "DApp", comment: "")
-        case .ether, .token:
+        case .moac, .token:
             return NSLocalizedString("confirmPayment.to.label.title", value: "To", comment: "")
         }
     }
@@ -76,7 +76,7 @@ struct ConfirmPaymentDetailsViewModel {
         switch transaction.transfer.type {
         case .dapp(_, let request):
             return request.url?.absoluteString ?? ""
-        case .ether, .token:
+        case .moac, .token:
             return transaction.address?.description ?? ""
         }
     }
@@ -130,7 +130,7 @@ struct ConfirmPaymentDetailsViewModel {
         switch transaction.transfer.type {
         case .token(let token):
             return balanceFormatter.string(from: transaction.value, decimals: token.decimals)
-        case .ether(let token, _), .dapp(let token, _):
+        case .moac(let token, _), .dapp(let token, _):
             return balanceFormatter.string(from: transaction.value, decimals: token.decimals)
         }
     }

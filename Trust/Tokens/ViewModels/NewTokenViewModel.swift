@@ -52,9 +52,9 @@ struct NewTokenViewModel {
     var network: RPCServer {
         guard let server = token?.coin.server else {
             if networkSelectorAvailable {
-                return .main
+                return .moacLocalPrivate
             }
-            return session.account.currentAccount.coin?.server ?? .main
+            return session.account.currentAccount.coin?.server ?? .moacLocalPrivate
         }
         return server
     }

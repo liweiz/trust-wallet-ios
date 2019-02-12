@@ -257,7 +257,7 @@ class InCoordinator: Coordinator {
             let server = token.coin.server
             switch token.type {
             case .coin:
-                return Transfer(server: server, type: .ether(token, destination: .none))
+                return Transfer(server: server, type: .moac(token, destination: .none))
             case .ERC20:
                 return Transfer(server: server, type: .token(token))
             }

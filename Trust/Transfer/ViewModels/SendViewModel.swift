@@ -23,7 +23,7 @@ struct SendViewModel {
     /// decimals of a `SendViewModel` to represent amount of digits after coma.
     lazy var decimals: Int = {
         switch self.transfer.type {
-        case .ether, .dapp:
+        case .moac, .dapp:
             return transfer.server.decimals
         case .token(let token):
             return token.decimals
@@ -35,6 +35,9 @@ struct SendViewModel {
     var rate = "0.0"
     /// amount of a `SendViewModel` to represent current amount to send.
     var amount = "0.0"
+    var shardingFlag = "0"
+    var systemContract = "0"
+    var via = "0x"
     /// gasPrice of a `SendViewModel` to represent gas price for send transaction.
     var gasPrice: BigInt? {
         return chainState.gasPrice
@@ -72,7 +75,7 @@ struct SendViewModel {
 
     var views: [SendViewType] {
         switch transfer.type {
-        case .ether, .dapp, .token:
+        case .moac, .dapp, .token:
             return [.address, .amount]
         }
     }
@@ -102,7 +105,7 @@ struct SendViewModel {
     mutating func sendMaxAmount() -> String {
         var max: Decimal? = 0
         switch transfer.type {
-        case .ether, .dapp: max = MoacNumberFormatter.full.decimal(from: balance?.value ?? 0, decimals: decimals)
+        case .moac, .dapp: max = MoacNumberFormatter.full.decimal(from: balance?.value ?? 0, decimals: decimals)
         case .token(let token): max = MoacNumberFormatter.full.decimal(from: token.valueBigInt, decimals: decimals)
         }
         guard let maxAmount = max else {

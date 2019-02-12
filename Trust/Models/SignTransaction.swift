@@ -14,6 +14,9 @@ public struct SignTransaction {
     let gasPrice: BigInt
     let gasLimit: BigInt
     let chainID: Int
+    let shardingFlag: BigInt
+    let systemContract: BigInt
+    let via: MoacAddress
 
     // additinalData
     let localizedObject: LocalizedOperationObject?

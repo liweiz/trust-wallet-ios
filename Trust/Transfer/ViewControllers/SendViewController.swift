@@ -159,12 +159,15 @@ class SendViewController: FormViewController {
         guard errors.isEmpty else { return }
         let addressString = addressRow?.value?.trimmed ?? ""
         let amountString = viewModel.amount
+        guard let via = MoacAddress(string: viewModel.via) else {
+            return displayError(error: Errors.invalidAddress)
+        }
         guard let address = MoacAddress(string: addressString) else {
             return displayError(error: Errors.invalidAddress)
         }
         let parsedValue: BigInt? = {
             switch transfer.type {
-            case .ether, .dapp:
+            case .moac, .dapp:
                 return MoacNumberFormatter.full.number(from: amountString, units: .mc)
             case .token(let token):
                 return MoacNumberFormatter.full.number(from: amountString, decimals: token.decimals)
@@ -180,7 +183,10 @@ class SendViewController: FormViewController {
             data: data,
             gasLimit: .none,
             gasPrice: viewModel.gasPrice,
-            nonce: .none
+            nonce: .none,
+            shardingFlag: BigInt(viewModel.shardingFlag, radix: 16),
+            systemContract: BigInt(viewModel.systemContract, radix: 16),
+            via: via
         )
         self.delegate?.didPressConfirm(transaction: transaction, transfer: transfer, in: self)
     }

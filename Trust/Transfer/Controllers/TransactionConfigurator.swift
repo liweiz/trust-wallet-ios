@@ -73,7 +73,7 @@ final class TransactionConfigurator {
     private static func data(for transaction: UnconfirmedTransaction, from: Address) -> Data {
         guard let to = transaction.to else { return Data() }
         switch transaction.transfer.type {
-        case .ether, .dapp:
+        case .moac, .dapp:
             return transaction.data ?? Data()
         case .token:
             return ERC20Encoder.encodeTransfer(to: to, tokens: transaction.value.magnitude)
@@ -82,7 +82,7 @@ final class TransactionConfigurator {
 
     private static func gasLimit(for type: TransferType) -> BigInt {
         switch type {
-        case .ether:
+        case .moac:
             return GasLimitConfiguration.default
         case .token:
             return GasLimitConfiguration.tokenTransfer
@@ -196,19 +196,19 @@ final class TransactionConfigurator {
     var signTransaction: SignTransaction {
         let value: BigInt = {
             switch transaction.transfer.type {
-            case .ether, .dapp: return valueToSend()
+            case .moac, .dapp: return valueToSend()
             case .token: return 0
             }
         }()
         let address: MoacAddress? = {
             switch transaction.transfer.type {
-            case .ether, .dapp: return transaction.to
+            case .moac, .dapp: return transaction.to
             case .token(let token): return token.contractAddress
             }
         }()
         let localizedObject: LocalizedOperationObject? = {
             switch transaction.transfer.type {
-            case .ether, .dapp: return .none
+            case .moac, .dapp: return .none
             case .token(let token):
                 return LocalizedOperationObject(
                     from: account.address.description,
@@ -232,6 +232,7 @@ final class TransactionConfigurator {
             gasPrice: configuration.gasPrice,
             gasLimit: configuration.gasLimit,
             chainID: server.chainID,
+            shardingFlag: configuration.
             localizedObject: localizedObject
         )
 
@@ -243,7 +244,7 @@ final class TransactionConfigurator {
     }
 
     func balanceValidStatus() -> BalanceStatus {
-        var etherSufficient = true
+        var moacSufficient = true
         var gasSufficient = true
         var tokenSufficient = true
 
@@ -252,26 +253,26 @@ final class TransactionConfigurator {
         let currentBalance = coin?.valueBalance
 
         guard let balance = currentBalance else {
-            return .ether(etherSufficient: etherSufficient, gasSufficient: gasSufficient)
+            return .moac(moacSufficient: moacSufficient, gasSufficient: gasSufficient)
         }
         let transaction = previewTransaction()
         let totalGasValue = transaction.gasPrice * transaction.gasLimit
 
-        //We check if it is ETH or token operation.
+        //We check if it is MC or token operation.
         switch transaction.transfer.type {
-        case .ether, .dapp:
+        case .moac, .dapp:
             if transaction.value > balance.value {
-                etherSufficient = false
+                moacSufficient = false
                 gasSufficient = false
             } else {
                 if totalGasValue + transaction.value > balance.value {
                     gasSufficient = false
                 }
             }
-            return .ether(etherSufficient: etherSufficient, gasSufficient: gasSufficient)
+            return .moac(moacSufficient: moacSufficient, gasSufficient: gasSufficient)
         case .token(let token):
             if totalGasValue > balance.value {
-                etherSufficient = false
+                moacSufficient = false
                 gasSufficient = false
             }
             if transaction.value > token.valueBigInt {

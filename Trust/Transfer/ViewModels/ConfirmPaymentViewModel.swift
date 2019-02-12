@@ -39,7 +39,7 @@ struct ConfirmPaymentViewModel {
         let networkSymbol = transfer.server.symbol
 
         switch transfer.type {
-        case .ether, .dapp:
+        case .moac, .dapp:
             return String(format: format, networkSymbol)
         case .token(let token):
             switch status {
@@ -52,7 +52,7 @@ struct ConfirmPaymentViewModel {
                 }
                 // should not be here
                 return ""
-            case .ether:
+            case .moac:
                 // should not be here
                 return ""
             }

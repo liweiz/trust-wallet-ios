@@ -9,7 +9,8 @@ struct Transfer {
 }
 
 enum TransferType {
-    case ether(TokenObject, destination: MoacAddress?)
+//    case ether(TokenObject, destination: MoacAddress?)
+    case moac(TokenObject, destination: MoacAddress?)
     case token(TokenObject)
     case dapp(TokenObject, DAppRequester)
 }
@@ -17,7 +18,7 @@ enum TransferType {
 extension TransferType {
     func symbol(server: RPCServer) -> String {
         switch self {
-        case .ether, .dapp:
+        case .moac, .dapp:
             return server.symbol
         case .token(let token):
             return token.symbol
@@ -27,7 +28,7 @@ extension TransferType {
     //used for pricing
     var contract: String {
         switch self {
-        case .ether(let token, _):
+        case .moac(let token, _):
             return token.contract
         case .dapp(let token, _):
             return token.contract
@@ -38,7 +39,7 @@ extension TransferType {
 
     var token: TokenObject {
         switch self {
-        case .ether(let token, _):
+        case .moac(let token, _):
             return token
         case .dapp(let token, _):
             return token
@@ -49,7 +50,7 @@ extension TransferType {
 
     var address: MoacAddress {
         switch self {
-        case .ether(let token, _):
+        case .moac(let token, _):
             return token.address
         case .dapp(let token, _):
             return token.address

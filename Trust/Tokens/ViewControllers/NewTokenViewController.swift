@@ -126,7 +126,7 @@ final class NewTokenViewController: FormViewController {
         let name = nameRow?.value ?? ""
         let symbol = symbolRow?.value ?? ""
         let decimals = Int(decimalsRow?.value ?? "") ?? 0
-        let coin = (networkRow?.value ?? RPCServer.main).coin
+        let coin = (networkRow?.value ?? RPCServer.moacLocalPrivate).coin
 
         guard let address = MoacAddress(string: contract) else {
             return displayError(error: Errors.invalidAddress)

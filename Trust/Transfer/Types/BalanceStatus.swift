@@ -3,22 +3,23 @@
 import Foundation
 
 enum BalanceStatus {
-    case ether(etherSufficient: Bool, gasSufficient: Bool)
+//    case ether(etherSufficient: Bool, gasSufficient: Bool)
+    case moac(moacSufficient: Bool, gasSufficient: Bool)
     case token(tokenSufficient: Bool, gasSufficient: Bool)
 }
 
 extension BalanceStatus {
 
     enum Key {
-        case insufficientEther
+        case insufficientMoac
         case insufficientGas
         case insufficientToken
         case correct
 
         var string: String {
             switch self {
-            case .insufficientEther:
-                return NSLocalizedString("send.error.insufficientEther", value: "Insufficient %@ balance", comment: "")
+            case .insufficientMoac:
+                return NSLocalizedString("send.error.insufficientMoac", value: "Insufficient %@ balance", comment: "")
             case .insufficientGas:
                 return NSLocalizedString("send.error.insufficientGas", value: "Insufficient %@ to cover gas fee", comment: "")
             case .insufficientToken:
@@ -31,8 +32,8 @@ extension BalanceStatus {
 
     var sufficient: Bool {
         switch self {
-        case .ether(let etherSufficient, let gasSufficient):
-            return etherSufficient && gasSufficient
+        case .moac(let moacSufficient, let gasSufficient):
+            return moacSufficient && gasSufficient
         case .token(let tokenSufficient, let gasSufficient):
             return tokenSufficient && gasSufficient
         }
@@ -40,9 +41,9 @@ extension BalanceStatus {
 
     var insufficientTextKey: Key {
         switch self {
-        case .ether(let etherSufficient, let gasSufficient):
+        case .moac(let etherSufficient, let gasSufficient):
             if !etherSufficient {
-                return .insufficientEther
+                return .insufficientMoac
             }
             if !gasSufficient {
                 return .insufficientGas

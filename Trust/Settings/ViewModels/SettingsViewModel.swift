@@ -19,6 +19,9 @@ struct SettingsViewModel {
             RPCServer.poa,
             RPCServer.callisto,
             RPCServer.gochain,
+            RPCServer.moac,
+            RPCServer.moacTestnet,
+            RPCServer.moacLocalPrivate,
         ]
     }
 

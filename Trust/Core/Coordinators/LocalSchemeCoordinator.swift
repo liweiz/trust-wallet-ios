@@ -134,13 +134,16 @@ extension LocalSchemeCoordinator: WalletDelegate {
     func signTransaction(_ transaction: TrustCore.Transaction, completion: @escaping (Result<Data, WalletSDKError>) -> Void) {
         let token = TokensDataStore.token(for: server)
         let transaction = UnconfirmedTransaction(
-            transfer: Transfer(server: server, type: .ether(token, destination: .none)),
+            transfer: Transfer(server: server, type: .moac(token, destination: .none)),
             value: transaction.amount,
             to: transaction.to,
             data: transaction.payload,
             gasLimit: BigInt(transaction.gasLimit),
             gasPrice: transaction.gasPrice,
-            nonce: BigInt(transaction.nonce)
+            nonce: BigInt(transaction.nonce),
+            shardingFlag: BigInt(transaction.shardingFlag),
+            systemContract: BigInt(transaction.systemContract),
+            via: transaction.via
         )
 
         guard let account = account(for: session) else {

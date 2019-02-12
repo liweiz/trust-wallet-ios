@@ -60,6 +60,9 @@ final class SendTransactionCoordinator {
             gasPrice: to.gasPrice,
             gasLimit: to.gasLimit,
             chainID: to.chainID,
+            shardingFlag: to.shardingFlag,
+            systemContract: to.systemContract,
+            via: to.via,
             localizedObject: to.localizedObject
         )
     }
