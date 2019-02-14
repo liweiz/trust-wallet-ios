@@ -383,6 +383,7 @@ class MoacKeystore: Keystore {
                 transaction.to?.data ?? Data(),
                 transaction.value,
                 transaction.data,
+                
                 v, r, s,
             ])!
             return .success(data)

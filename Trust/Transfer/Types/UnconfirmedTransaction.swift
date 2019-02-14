@@ -13,7 +13,7 @@ struct UnconfirmedTransaction {
     let gasLimit: BigInt?
     let gasPrice: BigInt?
     let nonce: BigInt?
-    
+
     let shardingFlag: BigInt?
     let systemContract: BigInt?
     let via: MoacAddress?

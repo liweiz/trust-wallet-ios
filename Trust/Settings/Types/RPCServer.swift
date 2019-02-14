@@ -103,7 +103,7 @@ enum RPCServer {
             case .gochain: return "https://rpc.gochain.io"
             case .moac: return "http://gateway.moac.io/mainnet"
             case .moacTestnet: return "http://gateway.moac.io/testnet"
-            case .moacLocalPrivate: return "http://127.0.0.1:20001"
+            case .moacLocalPrivate: return "http://127.0.0.1:8545"
             }
         }()
         return URL(string: urlString)!

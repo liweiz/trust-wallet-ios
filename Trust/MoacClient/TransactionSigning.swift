@@ -19,11 +19,14 @@ struct EIP155Signer: Signer {
     func hash(transaction: SignTransaction) -> Data {
         return rlpHash([
             transaction.nonce,
+            transaction.systemContract,
             transaction.gasPrice,
             transaction.gasLimit,
             transaction.to?.data ?? Data(),
             transaction.value,
             transaction.data,
+            transaction.shardingFlag,
+            transaction.via?.data ?? Data(),
             transaction.chainID, 0, 0,
         ] as [Any])!
     }
@@ -44,11 +47,14 @@ struct HomesteadSigner: Signer {
     func hash(transaction: SignTransaction) -> Data {
         return rlpHash([
             transaction.nonce,
+            transaction.systemContract,
             transaction.gasPrice,
             transaction.gasLimit,
             transaction.to?.data ?? Data(),
             transaction.value,
             transaction.data,
+            transaction.shardingFlag,
+            transaction.via?.data ?? Data()
         ])!
     }
 
